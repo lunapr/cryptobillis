@@ -3,9 +3,9 @@ import React from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, Keyboard } from 'swiper';
-import Kyle from './../../assets/Images/kyle.png';
-import lills from './../../assets/Images/lills.png'
-import serene from './../../assets/Images/serene.png'
+import skin1 from './../../assets/Images/Skins/IMG_3338.PNG'
+import skin2 from './../../assets/Images/Skins/IMG_3340.PNG'
+import skin3 from './../../assets/Images/Skins/IMG_3342.PNG'
 import imghair1 from './../../assets/Images/Hair/IMG_1454.PNG'
 import imghair2 from './../../assets/Images/Hair/IMG_1132.PNG'
 import imghair3 from './../../assets/Images/Hair/IMG_1871.PNG'
@@ -23,14 +23,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
       },
       layer1 :{
-        position: 'center',
         width: '100%',
       },
       layer2 : {
         width : '100%',
-        marginLeft : '-110%',
-        marginTop : '-5%',
-        position : 'center',
+        marginLeft : '-100%',
+        marginTop : '-1%',
       },
 
 }));
@@ -52,17 +50,17 @@ export default function HomeHero(props) {
   >
     <SwiperSlide>
         <div>
-        <img src={Kyle} ></img>
+        <img src={skin1} ></img>
         </div>
     </SwiperSlide>
           <SwiperSlide>
               <div>
-              <img src={lills} ></img>
+              <img src={skin2} ></img>
               </div>
         </SwiperSlide>
           <SwiperSlide>
               <div>
-              <img src={serene}></img>
+              <img src={skin3}></img>
               </div>
         </SwiperSlide>
   </Swiper>
