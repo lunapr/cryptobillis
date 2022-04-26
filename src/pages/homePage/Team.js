@@ -8,86 +8,67 @@ const useStyles = makeStyles((theme) => ({
     team: {
         position: 'relative',
         background: '#F2F2F2',
-        padding: theme.spacing(10, 0, 10, 0),
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
         [theme.breakpoints.down("sm")]: {
-            margin: theme.spacing(9, 0, 9, 0),
+            paddingTop: theme.spacing(9),
+            paddingBottom: theme.spacing(9),
         },
         [theme.breakpoints.down("xs")]: {
-            margin: theme.spacing(8, 0, 8, 0),
+            paddingTop: theme.spacing(8),
+            paddingBottom: theme.spacing(8),
         }
     },
     teamTitle: {
-        fontSize:'72px',
-        fontWeight: 700,
+        fontWeight: 800,
         color: '#000000',
-        margin: theme.spacing(5, 0, 5, 0),
+        marginBottom: theme.spacing(5),
         [theme.breakpoints.down("sm")]: {
-            fontSize:'56px',
-            margin: theme.spacing(4, 0, 4, 0),
+            marginBottom: theme.spacing(4),
         },
         [theme.breakpoints.down("xs")]: {
-            fontSize:'48px',
-            margin: theme.spacing(3, 0, 3, 0),
+            marginBottom: theme.spacing(3),
         }
     },
-    teamCard:{
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'space-between',
-        alignItems:'center',
-        background:'#ffffff',
-        borderRadius:'25px',
+    teamCard: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        background: '#ffffff',
+        borderRadius: 24,
         boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
-        padding: theme.spacing(8,0,8,0),
+        padding: theme.spacing(5),
         [theme.breakpoints.down("sm")]: {
-            padding: theme.spacing(7,0,7,0),
+            padding: theme.spacing(4),
+            borderRadius: 20,
         },
         [theme.breakpoints.down("xs")]: {
-            padding: theme.spacing(6,0,6,0),
+            borderRadius: 16,
+            padding: theme.spacing(3),
         }
     },
-    teamCardTwo:{
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'space-between',
-        alignItems:'center',
-        background:'#ffffff',
-        borderRadius:'25px',
-        padding: theme.spacing(8,0,8,0),
-        [theme.breakpoints.down("sm")]: {
-            padding: theme.spacing(7,0,7,0),
-        },
-        [theme.breakpoints.down("xs")]: {
-            padding: theme.spacing(6,0,6,0),
-        }
+    teamCardImg: {
+        objectFit: 'contain',
+        width: '100%',
+        maxWidth: 213,
     },
-    teamCardImg:{
-        objectFit:'contain',
-        width:'100%',
-        maxWidth:'213px',
-    },
-    // teamCardTwo:{
-    //     display:'flex',
-    //     justifyContent:'space-between',
-    //     alignItems:'center',
-    //     background:'#F9F9F9',
-    //     borderRadius:'25px',
-    //     padding: theme.spacing(4),
-    //     margin: theme.spacing(0, 0, 5, 0),
-    //     [theme.breakpoints.down("sm")]: {
-    //         margin: theme.spacing(0, 0, 4, 0),
-    //     },
-    //     [theme.breakpoints.down("xs")]: {
-    //         margin: theme.spacing(0, 0, 3, 0),
-    //     }
-    // },
-    teamCardTitle:{
-        fontWeight: 600,
+    teamCardTitle: {
+        fontWeight: 900,
         color: '#000000',
-        margin: theme.spacing(2,0,2,0),
+        marginTop: theme.spacing(4),
+        marginBottom: theme.spacing(2),
+        [theme.breakpoints.down("sm")]: {
+            marginTop: theme.spacing(3),
+            marginBottom: theme.spacing(1.5),
+        },
+        [theme.breakpoints.down("xs")]: {
+            marginTop: theme.spacing(2),
+            marginBottom: theme.spacing(1),
+        }
     },
-    teamCardSubtitle: { 
-        fontWeight: 600,
+    teamCardSubtitle: {
+        fontWeight: 900,
         color: 'rgba(0,0,0,0.5)',
     },
 }));
@@ -97,66 +78,66 @@ export default function Team(props) {
     const classes = useStyles();
 
     return (
-        <div  className={classes.team}>
+        <div className={classes.team}>
             <Container >
-                <Grid container spacing={4}>
+                <Grid container>
                     <Grid item xs={12}>
-                        <Typography className={classes.teamTitle}>The Team</Typography>
+                        <Typography variant='h2' className={classes.teamTitle}>The Team</Typography>
                     </Grid>
                 </Grid>
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={4} md={4}>
                         <div className={classes.teamCard}>
                             <img src={Lillis} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            LILLY
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                LILLY
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>CO-FOUNDER</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>CO-FOUNDER</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                        <div className={classes.teamCardTwo}>
+                        <div className={classes.teamCard}>
                             <img src={Serene} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            SERENE
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                SERENE
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>CO-FOUNDER</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>CO-FOUNDER</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                        <div className={classes.teamCardTwo}>
+                        <div className={classes.teamCard}>
                             <img src={Lillis} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            OLEG
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                OLEG
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>3D ANIMATOR</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>3D ANIMATOR</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                        <div className={classes.teamCardTwo}>
+                        <div className={classes.teamCard}>
                             <img src={Kyle} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            CALEB
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                CALEB
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>MARKETING</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>MARKETING</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                        <div className={classes.teamCardTwo}>
+                        <div className={classes.teamCard}>
                             <img src={Kyle} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            KYLE LENOUT
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                KYLE LENOUT
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>DEVELOPER</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>DEVELOPER</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
-                        <div className={classes.teamCardTwo}>
+                        <div className={classes.teamCard}>
                             <img src={Serene} className={classes.teamCardImg}></img>
-                            <Typography variant="h1" className={classes.teamCardTitle}>
-                            SHAWNEE
+                            <Typography variant="h4" className={classes.teamCardTitle}>
+                                SHAWNEE
                             </Typography>
-                            <Typography variant="h4" className={classes.teamCardSubtitle}>MARKETING</Typography>
+                            <Typography variant="subtitle1" className={classes.teamCardSubtitle}>MARKETING</Typography>
                         </div>
                     </Grid>
                 </Grid>

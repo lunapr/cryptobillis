@@ -6,72 +6,85 @@ import WelcomeArrows from './../../assets/Images/welcomeArrows.png';
 const useStyles = makeStyles((theme) => ({
     welcome: {
         backgroundColor: '#EFEFEF',
-        padding: theme.spacing(10, 0, 10, 0),
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
         [theme.breakpoints.down("sm")]: {
-            padding: theme.spacing(9, 0, 9, 0),
+            paddingTop: theme.spacing(9),
+            paddingBottom: theme.spacing(9),
         },
         [theme.breakpoints.down("xs")]: {
-            padding: theme.spacing(8, 0, 8, 0),
+            paddingTop: theme.spacing(8),
+            paddingBottom: theme.spacing(8),
         }
     },
-    welcomeTopWrapper:{
-        display:'flex',
-        justifyContent:'space-between',
-        margin: theme.spacing(0, 0, 5, 0),
+    welcomeTopWrapper: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        marginBottom: theme.spacing(5),
         [theme.breakpoints.down("sm")]: {
-            margin: theme.spacing(0, 0, 4, 0),
+            marginBottom: theme.spacing(4),
+            flexDirection: 'column',
         },
         [theme.breakpoints.down("xs")]: {
-            margin: theme.spacing(0, 0, 3, 0),
+            marginBottom: theme.spacing(3),
         }
     },
-    welcomeArrow:{
-        objectFit:'contain',
-        maxWidth:'400px',
+    welcomeArrow: {
+        objectFit: 'contain',
+        maxWidth: '400px',
+        [theme.breakpoints.down("sm")]: {
+            maxWidth: '300px',
+        },
+        [theme.breakpoints.down("xs")]: {
+            maxWidth: '200px',
+        }
     },
-    welcomePreTitle:{
-        fontWeight: 700,
+    welcomePreTitle: {
+        fontWeight: 800,
         color: '#000000',
-        textAlign:'right',
+        textAlign: 'right',
+        flex: 1,
+        [theme.breakpoints.down("sm")]: {
+            textAlign: 'left',
+        }
     },
     welcomeTitle: {
-        fontSize:'72px',
-        fontWeight: 700,
+        fontWeight: 800,
         color: '#000000',
-        [theme.breakpoints.down("sm")]: {
-            fontSize:'56px',
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize:'48px',
-        }
     },
-    welcomeCard:{
-        position:'relative',
-        display:'flex',
-        justifyContent:'space-between',
-        alignItems:'center',
-        background:'#ffffff',
-        borderRadius:'25px',
+    welcomeCard: {
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'flex-start',
+        background: '#ffffff',
+        borderRadius: 24,
         boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
-        margin: theme.spacing(0, 0, 5, 0),
+        padding: theme.spacing(5),
         [theme.breakpoints.down("sm")]: {
-            margin: theme.spacing(0, 0, 4, 0),
+            padding: theme.spacing(4),
         },
         [theme.breakpoints.down("xs")]: {
-            margin: theme.spacing(0, 0, 3, 0),
+            padding: theme.spacing(3),
+            flexDirection: 'column'
         }
     },
-    welcomeFeature:{
-        position:'absolute',
-        objectFit:'contain',
-        width:'100%',
-        maxWidth:'213px',
+    welcomeFeature: {
+        objectFit: 'contain',
+        width: '100%',
+        maxWidth: '213px',
+        marginRight: theme.spacing(5),
+        [theme.breakpoints.down("sm")]: {
+            marginRight: theme.spacing(4),
+        },
+        [theme.breakpoints.down("xs")]: {
+            marginRight: theme.spacing(0),
+            marginBottom: theme.spacing(3)
+        }
         // margin: theme.spacing(0, 5, 0, 0),
     },
     welcomeBody: {
         fontWeight: 500,
         color: '#1F2024',
-        margin: theme.spacing(0, 2, 0, 2),
     },
 }));
 
@@ -80,22 +93,23 @@ export default function Welcome(props) {
     const classes = useStyles();
 
     return (
-        <div  className={classes.welcome}>
+        <div className={classes.welcome}>
             <Container >
                 <Grid container>
                     <Grid item xs={12}>
-                    <Typography variant="h3" className={classes.welcomePreTitle}>WELCOME TO</Typography>
+                        <Typography variant="h6" className={classes.welcomePreTitle}>WELCOME TO</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <div className={classes.welcomeTopWrapper}>
                             <img src={WelcomeArrows} className={classes.welcomeArrow}></img>
-                            <Typography className={classes.welcomeTitle}>METAVERSE</Typography>
+                            <Typography variant='h2' className={classes.welcomeTitle}>METAVERSE</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12}>
                         <div className={classes.welcomeCard}>
-                                    <img src={Kyle} className={classes.welcomeFeature}></img>
-                                    <Typography variant="h5" className={classes.welcomeBody}>The CRYPTOBILLI$ are hosting a concert in WEB3. We love to listen to LIVE music, so we are putting together a music festival for NFTS! The CRYPTOBILLI$ are NFTS afterall, providing access to musical performances and SPECIAL EVENTS. Our community is all-inclusive, so why not check out the ROADMAP below to see what’s in the works?</Typography>
+                            <img src={Kyle} className={classes.welcomeFeature}></img>
+                            <Typography variant="h6" className={classes.welcomeBody}>
+                                The CRYPTOBILLI$ are hosting a concert in WEB3. We love to listen to LIVE music, so we are putting together a music festival for NFTS! The CRYPTOBILLI$ are NFTS afterall, providing access to musical performances and SPECIAL EVENTS. Our community is all-inclusive, so why not check out the ROADMAP below to see what’s in the works?</Typography>
                         </div>
                     </Grid>
                 </Grid>

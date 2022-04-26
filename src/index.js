@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 const defaultTheme = createTheme({});
 
@@ -38,42 +38,8 @@ const theme = createTheme({
   },
   overrides: {
     MuiCssBaseline: {
-      //   '@global': {
-      //     '*::-webkit-scrollbar': {
-      //         width: 12,
-      //         background: 'linear-gradient(180deg, #444444 0%, #2F2F2F 49.48%, #1D1D1D 100%)',
-      //         borderRadius: 50,
-      //     },
-      //     // '*::-webkit-scrollbar-track': {
-      //     //     height: 20,
-      //     // },
-
-      //     '*::-webkit-scrollbar-thumb': {
-      //         background: 'linear-gradient(93.69deg, #E4E09E 1.23%, #F7F0C0 51.12%, #C4B46C 103.14%)',
-      //         borderRadius: 50,
-      //         outline: 'none',
-      //         //   outline: '1px solid slategrey'
-      //     },
-      // },
       "@global": {
-        // '*::-webkit-scrollbar': {
-        //   width: 12,
-        //   background: 'linear-gradient(180deg, #444444 0%, #2F2F2F 49.48%, #1D1D1D 100%)',
-        //   borderRadius: 50,
-        // },
-        // // '*::-webkit-scrollbar-track': {
-        // //     height: 20,
-        // // },
-
-        // '*::-webkit-scrollbar-thumb': {
-        //   background: 'linear-gradient(93.69deg, #E4E09E 1.23%, #F7F0C0 51.12%, #C4B46C 103.14%)',
-        //   borderRadius: 50,
-        //   outline: 'none',
-        //   //   outline: '1px solid slategrey'
-        // },
         body: {
-          // overflow: 'auto',
-          // paddingRight:'0px !important',
           fontFamily: 'Montserrat',
           backgroundColor: 'transparent',
           '& .slick-prev:before, .slick-next:before': {
@@ -81,18 +47,34 @@ const theme = createTheme({
           }
         },
         h1: {
-          fontSize: 48,
+          fontSize: 114,
           [breakpoints.down("sm")]: {
-            fontSize: 40,
+            fontSize: 96,
           },
           [breakpoints.down("xs")]: {
-            fontSize: 32,
+            fontSize: 80,
           },
-          fontFamily: 'Commissioner',
         },
         h2: {
-          fontSize: 36,
-          fontFamily: 'Commissioner',
+          fontSize: 96,
+          [breakpoints.down("sm")]: {
+            fontSize: 72,
+          },
+          [breakpoints.down("xs")]: {
+            fontSize: 56,
+          },
+        },
+        h3: {
+          fontSize: 72,
+          [breakpoints.down("sm")]: {
+            fontSize: 56,
+          },
+          [breakpoints.down("xs")]: {
+            fontSize: 40,
+          },
+        },
+        h4: {
+          fontSize: 40,
           [breakpoints.down("sm")]: {
             fontSize: 32,
           },
@@ -100,9 +82,8 @@ const theme = createTheme({
             fontSize: 28,
           },
         },
-        h3: {
+        h5: {
           fontSize: 32,
-          fontFamily: 'Commissioner',
           [breakpoints.down("sm")]: {
             fontSize: 28,
           },
@@ -110,9 +91,8 @@ const theme = createTheme({
             fontSize: 24,
           },
         },
-        h4: {
+        h6: {
           fontSize: 28,
-          fontFamily: 'Commissioner',
           [breakpoints.down("sm")]: {
             fontSize: 24,
           },
@@ -120,29 +100,8 @@ const theme = createTheme({
             fontSize: 20,
           },
         },
-        h5: {
-          fontSize: 24,
-          fontFamily: 'Titillium Web',
-          [breakpoints.down("sm")]: {
-            fontSize: 21,
-          },
-          [breakpoints.down("xs")]: {
-            fontSize: 18,
-          },
-        },
-        h6: {
-          fontSize: 20,
-          fontFamily: 'Titillium Web',
-          [breakpoints.down("sm")]: {
-            fontSize: 18,
-          },
-          [breakpoints.down("xs")]: {
-            fontSize: 16,
-          },
-        },
         p: {
           fontSize: 16,
-          fontFamily: 'Titillium Web',
           [breakpoints.down("sm")]: {
             fontSize: 15,
           },
@@ -152,7 +111,6 @@ const theme = createTheme({
         },
         ul: {
           fontSize: 18,
-          fontFamily: 'Titillium Web',
           [breakpoints.down("sm")]: {
             fontSize: 17,
           },
@@ -164,20 +122,34 @@ const theme = createTheme({
     },
     MuiTypography: {
       h1: {
-        fontSize: 48,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
+        fontSize: 114,
         [breakpoints.down("sm")]: {
-          fontSize: 40,
+          fontSize: 96,
         },
         [breakpoints.down("xs")]: {
-          fontSize: 32,
+          fontSize: 80,
         },
       },
       h2: {
-        fontSize: 36,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
+        fontSize: 96,
+        [breakpoints.down("sm")]: {
+          fontSize: 72,
+        },
+        [breakpoints.down("xs")]: {
+          fontSize: 56,
+        },
+      },
+      h3: {
+        fontSize: 72,
+        [breakpoints.down("sm")]: {
+          fontSize: 56,
+        },
+        [breakpoints.down("xs")]: {
+          fontSize: 40,
+        },
+      },
+      h4: {
+        fontSize: 40,
         [breakpoints.down("sm")]: {
           fontSize: 32,
         },
@@ -185,10 +157,8 @@ const theme = createTheme({
           fontSize: 28,
         },
       },
-      h3: {
+      h5: {
         fontSize: 32,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
         [breakpoints.down("sm")]: {
           fontSize: 28,
         },
@@ -196,10 +166,8 @@ const theme = createTheme({
           fontSize: 24,
         },
       },
-      h4: {
+      h6: {
         fontSize: 28,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
         [breakpoints.down("sm")]: {
           fontSize: 24,
         },
@@ -207,32 +175,26 @@ const theme = createTheme({
           fontSize: 20,
         },
       },
-      h5: {
-        fontSize: 24,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
-        [breakpoints.down("sm")]: {
-          fontSize: 21,
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: 18,
-        },
-      },
-      h6: {
-        fontSize: 20,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
-        [breakpoints.down("sm")]: {
-          fontSize: 18,
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: 16,
-        },
-      },
       subtitle1: {
+        fontSize: 24,
+        [breakpoints.down("sm")]: {
+          fontSize: 20,
+        },
+        [breakpoints.down("xs")]: {
+          fontSize: 19,
+        },
+      },
+      subtitle2: {
+        fontSize: 20,
+        [breakpoints.down("sm")]: {
+          fontSize: 19,
+        },
+        [breakpoints.down("xs")]: {
+          fontSize: 18,
+        },
+      },
+      body1: {
         fontSize: 18,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
         [breakpoints.down("sm")]: {
           fontSize: 17,
         },
@@ -240,37 +202,13 @@ const theme = createTheme({
           fontSize: 16,
         },
       },
-      subtitle2: {
-        fontSize: 16,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
-        [breakpoints.down("sm")]: {
-          fontSize: 15,
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: 14,
-        },
-      },
-      body1: {
-        fontSize: 16,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
-        [breakpoints.down("sm")]: {
-          fontSize: 15,
-        },
-        [breakpoints.down("xs")]: {
-          fontSize: 14,
-        },
-      },
       body2: {
-        fontSize: 14,
-        // fontFamily: 'Titillium Web',
-        fontFamily: 'Commissioner',
+        fontSize: 16,
         [breakpoints.down("sm")]: {
-          fontSize: 13,
+          fontSize: 15,
         },
         [breakpoints.down("xs")]: {
-          fontSize: 12,
+          fontSize: 14,
         },
 
       },
@@ -339,7 +277,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <App />
+        <App />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
