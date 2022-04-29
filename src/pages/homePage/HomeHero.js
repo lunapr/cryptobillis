@@ -101,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     display: "block",
     textAlign: "center",
-    width: "100vw",
-    height: "35vw",
+    width: "100%",
+    height: "75%",
   },
   skins: {
     top: "50%",
