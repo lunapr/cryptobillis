@@ -112,16 +112,17 @@ const useStyles = makeStyles((theme) => (
       layer1 :{
         display : 'flex',
         position : 'relative',
-        Zindex : '1000',
+        zIndex : '2'
       },
       layer2 : {
         display : 'flex',
         position : 'relative',
+        zIndex : '4',
       },
       layer4 : {
         display : 'flex',
         position : 'relative',
-
+        zIndex : '6'
       } ,     
 
 }));
