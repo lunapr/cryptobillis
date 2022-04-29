@@ -1,23 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
+/** @format */
+
+import { Container, Grid } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import PropTypes from "prop-types";
+import React from "react";
 // import Logo from './assets/images/nftNewLogo.png';
 import HomePage from "./pages/homePage/Index";
-import { Grid, Container } from '@material-ui/core';
 // import { HashLink } from 'react-router-hash-link';
-
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "#fff !important",
-    boxShadow:"none",
+    boxShadow: "none",
     "&.MuiPaper-elevation4": {
       backgroundColor: "#fff !important",
-      boxShadow:"none",
+      boxShadow: "none",
     },
   },
   lunaHeaderLogo: {
@@ -37,12 +38,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   headerNavLink: {
-    fontFamily: 'Titillium Web',
+    fontFamily: "Titillium Web",
     fontWeight: 600,
     fontSize: 16,
-    color: '#1F2024',
+    color: "#1F2024",
     marginLeft: 16,
-    textDecoration:'none',
+    textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
       fontSize: 14,
       marginLeft: 12,
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 12,
       marginLeft: 8,
     },
-  }
+  },
 }));
 
 function ElevationScroll(props) {
