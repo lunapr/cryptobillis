@@ -165,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   hairs: {
-    top: "56%",
+    top: "55%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: "1",
@@ -177,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   glasses: {
-    top: "57%",
+    top: "58%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     [theme.breakpoints.down("xs")]: {
@@ -295,8 +295,8 @@ export default function HomeHero(props) {
     <div
       style={{
         paddingTop: "100px",
-        paddingBottom: "100px",
-        backgroundImage: "linear-gradient(#B4FFA0 60%, #ffffff 0%)",
+        paddingBottom: "150px",
+        backgroundImage: "linear-gradient(#B4FFA0 55%, #ffffff 0%)",
       }}>
       <div className={classes.hero_container}>
         <Swiper
