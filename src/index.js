@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { BrowserRouter } from 'react-router-dom'
+/** @format */
+
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 const defaultTheme = createTheme({});
 
@@ -14,37 +15,37 @@ const { breakpoints } = defaultTheme;
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#fff',
+      main: "#fff",
     },
     secondary: {
-      main: '#000',
+      main: "#000",
     },
   },
   typography: {
     fontFamily: [
-      'Titillium Web',
-      'Roboto',
-      'Montserrat',
-      '-apple-system',
-      'BlinkMacSystemFont',
+      "Titillium Web",
+      "Roboto",
+      "Montserrat",
+      "-apple-system",
+      "BlinkMacSystemFont",
       '"Segoe UI"',
       '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
+      "Arial",
+      "sans-serif",
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
-    ].join(','),
+    ].join(","),
   },
   overrides: {
     MuiCssBaseline: {
       "@global": {
         body: {
-          fontFamily: 'Montserrat',
-          backgroundColor: 'transparent',
-          '& .slick-prev:before, .slick-next:before': {
-            color: '#000',
-          }
+          fontFamily: "Montserrat",
+          backgroundColor: "transparent",
+          "& .slick-prev:before, .slick-next:before": {
+            color: "#000",
+          },
         },
         h1: {
           fontSize: 114,
@@ -210,13 +211,11 @@ const theme = createTheme({
         [breakpoints.down("xs")]: {
           fontSize: 14,
         },
-
       },
-
     },
     MuiAppBar: {
       root: {
-        backgroundColor: '#161616 !important',
+        backgroundColor: "#161616 !important",
       },
       // colorPrimary:{
       //   backgroundColor:'#000 !important',
@@ -224,7 +223,7 @@ const theme = createTheme({
     },
     MuiButton: {
       root: {
-        textTransform: 'uppercase',
+        textTransform: "uppercase",
         borderRadius: 0,
         // "& svg": {
         //   width: 24,
@@ -273,6 +272,8 @@ const theme = createTheme({
   },
 });
 
+console.log(theme);
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
@@ -281,7 +282,7 @@ ReactDOM.render(
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

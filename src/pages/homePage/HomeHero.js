@@ -1,5 +1,6 @@
 /** @format */
 
+import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
@@ -103,6 +104,52 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     width: "100%",
     height: "75%",
+    [theme.breakpoints.between(theme.breakpoints.values.lg - 280, "lg")]: {
+      height: "76%",
+    },
+    //1280px+
+    [theme.breakpoints.up("lg")]: {
+      height: "75%",
+    },
+    //400px-500px - iPhone XR
+    [theme.breakpoints.between(
+      theme.breakpoints.values.sm - 200,
+      theme.breakpoints.values.sm - 100
+    )]: {
+      height: "69%",
+    },
+    //500px-600px - Surface Duo
+    [theme.breakpoints.between(theme.breakpoints.values.sm - 100, "sm")]: {
+      height: "73%",
+    },
+    [theme.breakpoints.between("xs", theme.breakpoints.values.sm - 225)]: {
+      height: "75%",
+    },
+    //385px - 400px - iPhone 12 Pro
+    [theme.breakpoints.between(
+      theme.breakpoints.values.sm - 215,
+      theme.breakpoints.values.sm - 200
+    )]: {
+      height: "70%",
+    },
+    //375px-385px - iPhone SE
+    [theme.breakpoints.between(
+      theme.breakpoints.values.sm - 225,
+      theme.breakpoints.values.sm - 215
+    )]: {
+      height: "75%",
+    },
+    //360px-385px
+    [theme.breakpoints.between(
+      theme.breakpoints.values.sm - 240,
+      theme.breakpoints.values.sm - 225
+    )]: {
+      height: "73%",
+    },
+    //Blackberry - 600px
+    [theme.breakpoints.only("sm")]: {
+      height: "66%",
+    },
   },
   skins: {
     top: "50%",
@@ -123,26 +170,35 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   glasses: {
-    top: "60%",
+    top: "58%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    [theme.breakpoints.down("xs")]: {
+      top: "57%",
+    },
   },
   piercings: {
     top: "57%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: "3",
+    [theme.breakpoints.down("xs")]: {
+      top: "55%",
+    },
   },
   earings: {
     top: "56%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    [theme.breakpoints.down("xs")]: {
+      top: "54%",
+    },
   },
 
   imgStyle: {
-    width: "90vw",
-    height: "40vh",
     objectFit: "contain",
+    width: "inherit",
+    height: "inherit",
   },
 }));
 
@@ -232,7 +288,7 @@ export default function HomeHero(props) {
     <div style={{ marginTop: "100px", marginBottom: "150px" }}>
       <div className={classes.hero_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           centeredSlides={true}
           loop="true"
           autoplay={{
@@ -246,7 +302,9 @@ export default function HomeHero(props) {
           {skins.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Skin" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Skin" />
+                </Container>
               </SwiperSlide>
             );
           })}
@@ -254,7 +312,7 @@ export default function HomeHero(props) {
       </div>
       <div className={classes.sec_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           centeredSlides={true}
           loop="true"
           autoplay={{
@@ -267,7 +325,9 @@ export default function HomeHero(props) {
           {hairs.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Hair" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Hair" />
+                </Container>
               </SwiperSlide>
             );
           })}
@@ -275,7 +335,7 @@ export default function HomeHero(props) {
       </div>
       <div className={classes.sec_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           centeredSlides={true}
           loop="true"
           autoplay={{
@@ -289,7 +349,9 @@ export default function HomeHero(props) {
           {mouths.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Mouth" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Mouth" />
+                </Container>
               </SwiperSlide>
             );
           })}
@@ -297,7 +359,7 @@ export default function HomeHero(props) {
       </div>
       <div className={classes.sec_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           centeredSlides={true}
           loop="true"
           autoplay={{
@@ -310,7 +372,9 @@ export default function HomeHero(props) {
           {glasses.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Glass" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Glass" />
+                </Container>
               </SwiperSlide>
             );
           })}
@@ -318,7 +382,7 @@ export default function HomeHero(props) {
       </div>
       <div className={classes.sec_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           centeredSlides={true}
           loop="true"
           autoplay={{
@@ -332,7 +396,9 @@ export default function HomeHero(props) {
           {piercings.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Piercing" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Piercing" />
+                </Container>
               </SwiperSlide>
             );
           })}
@@ -340,7 +406,7 @@ export default function HomeHero(props) {
       </div>
       <div className={classes.sec_container}>
         <Swiper
-          spaceBetween={10}
+          spaceBetween={20}
           loop="true"
           centeredSlides={true}
           autoplay={{
@@ -353,7 +419,9 @@ export default function HomeHero(props) {
           {earings.map((item) => {
             return (
               <SwiperSlide>
-                <img src={item} alt="Earing" />
+                <Container maxWidth="sm">
+                  <img className={classes.imgStyle} src={item} alt="Earing" />
+                </Container>
               </SwiperSlide>
             );
           })}
