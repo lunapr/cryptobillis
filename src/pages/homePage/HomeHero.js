@@ -130,7 +130,14 @@ const useStyles = makeStyles((theme) => ({
       theme.breakpoints.values.sm - 215,
       theme.breakpoints.values.sm - 200
     )]: {
-      height: "70%",
+      height: "69%",
+    },
+    //400px-500px - Samsung Galaxy
+    [theme.breakpoints.between(
+      theme.breakpoints.values.sm - 200,
+      theme.breakpoints.values.sm - 100
+    )]: {
+      height: "68%",
     },
     //375px-385px - iPhone SE
     [theme.breakpoints.between(
@@ -158,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   hairs: {
-    top: "55%",
+    top: "56%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: "1",
@@ -170,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   glasses: {
-    top: "58%",
+    top: "57%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     [theme.breakpoints.down("xs")]: {
@@ -285,7 +292,12 @@ export default function HomeHero(props) {
   ];
 
   return (
-    <div style={{ marginTop: "100px", marginBottom: "150px" }}>
+    <div
+      style={{
+        paddingTop: "100px",
+        paddingBottom: "150px",
+        backgroundImage: "linear-gradient(#B4FFA0 55%, #ffffff 0%)",
+      }}>
       <div className={classes.hero_container}>
         <Swiper
           spaceBetween={20}
