@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     textAlign: "center",
     width: "100vw",
-    height: "55vh",
+    height: "365px",
   },
   sec_container: {
     position: "absolute",
@@ -103,60 +103,7 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     textAlign: "center",
     width: "100%",
-    height: "75%",
-    [theme.breakpoints.between(theme.breakpoints.values.lg - 280, "lg")]: {
-      height: "76%",
-    },
-    //1280px+
-    [theme.breakpoints.up("lg")]: {
-      height: "75%",
-    },
-    //400px-500px - iPhone XR
-    [theme.breakpoints.between(
-      theme.breakpoints.values.sm - 200,
-      theme.breakpoints.values.sm - 100
-    )]: {
-      height: "69%",
-    },
-    //500px-600px - Surface Duo
-    [theme.breakpoints.between(theme.breakpoints.values.sm - 100, "sm")]: {
-      height: "73%",
-    },
-    [theme.breakpoints.between("xs", theme.breakpoints.values.sm - 225)]: {
-      height: "75%",
-    },
-    //385px - 400px - iPhone 12 Pro
-    [theme.breakpoints.between(
-      theme.breakpoints.values.sm - 215,
-      theme.breakpoints.values.sm - 200
-    )]: {
-      height: "69%",
-    },
-    //400px-500px - Samsung Galaxy
-    [theme.breakpoints.between(
-      theme.breakpoints.values.sm - 200,
-      theme.breakpoints.values.sm - 100
-    )]: {
-      height: "68%",
-    },
-    //375px-385px - iPhone SE
-    [theme.breakpoints.between(
-      theme.breakpoints.values.sm - 225,
-      theme.breakpoints.values.sm - 215
-    )]: {
-      height: "75%",
-    },
-    //360px-385px
-    [theme.breakpoints.between(
-      theme.breakpoints.values.sm - 240,
-      theme.breakpoints.values.sm - 225
-    )]: {
-      height: "73%",
-    },
-    //Blackberry - 600px
-    [theme.breakpoints.only("sm")]: {
-      height: "66%",
-    },
+    height: "500px",
   },
   skins: {
     top: "50%",
@@ -177,12 +124,9 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "0",
   },
   glasses: {
-    top: "58%",
+    top: "57.5%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    [theme.breakpoints.down("xs")]: {
-      top: "57%",
-    },
   },
   piercings: {
     top: "57%",
