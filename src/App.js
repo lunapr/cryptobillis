@@ -12,6 +12,20 @@ import Logo from './assets/Images/cryptologo.png';
 import HomePage from "./pages/homePage/Index";
 import { Twitter } from '@material-ui/icons';
 import Hidden from '@material-ui/core/Hidden';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import clsx from 'clsx';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
+
 
 // import { HashLink } from 'react-router-hash-link';
 
@@ -51,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       height: 16,
-      margin:'unset'
+      margin: 'unset'
     },
   },
   socialWrapper: {
@@ -89,6 +103,18 @@ ElevationScroll.propTypes = {
 export default function ElevateAppBar(props) {
   const classes = useStyles();
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -97,6 +123,50 @@ export default function ElevateAppBar(props) {
           <Toolbar disableGutters>
             <Container>
               <Grid container alignItems="center" justifyContent="space-between">
+                <Hidden xsSm>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerOpen}
+                    edge="start"
+                    className={clsx(classes.menuButton, open && classes.hide)}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Drawer
+                    className={classes.drawer}
+                    variant="persistent"
+                    anchor="top"
+                    open={open}
+                    classes={{
+                      paper: classes.drawerPaper,
+                    }}
+                  >
+                    <List>
+                      <ListItem button>
+                        <ListItemText>
+                          <Link className={classes.headerNavLink}>
+                            ABOUT US
+                          </Link>
+                        </ListItemText>
+                      </ListItem>
+                      <ListItem button>
+                        <ListItemText>
+                          <Link className={classes.headerNavLink}>
+                            ROADMAP
+                          </Link>
+                        </ListItemText>
+                      </ListItem>
+                      <ListItem button>
+                        <ListItemText>
+                          <Link className={classes.headerNavLink}>
+                            TEAM
+                          </Link>
+                        </ListItemText>
+                      </ListItem>
+                    </List>
+                  </Drawer>
+                </Hidden>
                 <Hidden xsDown>
                   <Grid item xs>
                     <Link className={classes.headerNavLink}>

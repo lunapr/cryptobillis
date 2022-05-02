@@ -294,7 +294,7 @@ export default function HomeHero(props) {
   return (
     <div
       style={{
-        paddingTop: "100px",
+        paddingTop: "10px",
         paddingBottom: "150px",
         backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
       }}>

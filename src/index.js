@@ -23,7 +23,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: [
-      "Titillium Web",
+      "Commissioner",
       "Roboto",
       "Montserrat",
       "-apple-system",
@@ -41,7 +41,6 @@ const theme = createTheme({
     MuiCssBaseline: {
       "@global": {
         body: {
-          fontFamily: "Montserrat",
           backgroundColor: "transparent",
           "& .slick-prev:before, .slick-next:before": {
             color: "#000",
