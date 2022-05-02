@@ -1,6 +1,6 @@
 /** @format */
 
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Link } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,8 +8,11 @@ import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import PropTypes from "prop-types";
 import React from "react";
-// import Logo from './assets/images/nftNewLogo.png';
+import Logo from './assets/Images/cryptologo.png';
 import HomePage from "./pages/homePage/Index";
+import { Twitter } from '@material-ui/icons';
+import Hidden from '@material-ui/core/Hidden';
+
 // import { HashLink } from 'react-router-hash-link';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,24 +24,10 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "none",
     },
   },
-  lunaHeaderLogo: {
-    width: 80,
-    display: "block",
-    [theme.breakpoints.down("sm")]: {
-      width: 72,
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: 64,
-    },
-  },
-  mainBody: {
-    marginTop: "-64px",
-  },
   title: {
     flexGrow: 1,
   },
   headerNavLink: {
-    fontFamily: "Titillium Web",
     fontWeight: 600,
     fontSize: 16,
     color: "#1F2024",
@@ -50,9 +39,26 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 12,
-      marginLeft: 8,
+      marginLeft: 4,
     },
   },
+  logo: {
+    height: 32,
+    display: 'block',
+    margin: '0 auto',
+    [theme.breakpoints.down("sm")]: {
+      height: 24,
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 16,
+      margin:'unset'
+    },
+  },
+  socialWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end'
+  }
 }));
 
 function ElevationScroll(props) {
@@ -88,61 +94,45 @@ export default function ElevateAppBar(props) {
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar position="fixed" className={classes.appBar}>
-          <Container>
-            <Grid Container>
-              <Grid item xs={12}>
-                <Toolbar disableGutters>
-                  <div className={classes.title}>
-                    <a href="/">
-                      <img
-                        // src={Logo}
-                        alt=""
-                        className={classes.lunaHeaderLogo}
-                      />
-                    </a>
+          <Toolbar disableGutters>
+            <Container>
+              <Grid container alignItems="center" justifyContent="space-between">
+                <Hidden xsDown>
+                  <Grid item xs>
+                    <Link className={classes.headerNavLink}>
+                      ABOUT US
+                    </Link>
+                    <Link className={classes.headerNavLink}>
+                      ROADMAP
+                    </Link>
+                    <Link className={classes.headerNavLink}>
+                      TEAM
+                    </Link>
+                  </Grid>
+                </Hidden>
+                <Grid item xs>
+                  <a href="/">
+                    <img
+                      src={Logo}
+                      alt=""
+                      className={classes.logo}
+                    />
+                  </a>
+                </Grid>
+                <Grid item xs>
+                  <div className={classes.socialWrapper}>
+                    <Twitter className={classes.footerIcons} />
+                    <Twitter className={classes.footerIcons} />
+                    <Twitter className={classes.footerIcons} />
                   </div>
-                  <div>
-                    {/* <Link className={classes.headerNavLink}>
-                      LINK
-                    </Link> */}
-                    {/* <HashLink
-                    className={classes.headerNavLink}
-                      to="#aboutUs"
-                      scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' })}
-                    >
-                      ABOUT
-                    </HashLink> */}
-                    {/* <HashLink
-                    className={classes.headerNavLink}
-                      to="#ourAdvisors"
-                      scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                    >
-                      ADVISORS
-                    </HashLink> */}
-                    {/* <HashLink
-                    className={classes.headerNavLink}
-                      to="#services"
-                      scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                    >
-                      SERVICES
-                    </HashLink> */}
-                    {/* <Link className={classes.headerNavLink}>
-                      LINK
-                    </Link> */}
-                    {/* <Link className={classes.headerNavLink}>
-                      LINK
-                    </Link> */}
-                  </div>
-                </Toolbar>
+                </Grid>
               </Grid>
-            </Grid>
-          </Container>
+            </Container>
+          </Toolbar>
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-      <div className={classes.mainBody}>
-        <HomePage />
-      </div>
+      <HomePage />
     </React.Fragment>
   );
 }
