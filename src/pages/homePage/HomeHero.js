@@ -103,7 +103,10 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     textAlign: "center",
     width: "100%",
-    height: "500px",
+    height: "612px",
+    [theme.breakpoints.down("sm")]: {
+      height: "616px",
+    },
   },
   skins: {
     top: "50%",
