@@ -296,7 +296,7 @@ export default function HomeHero(props) {
       style={{
         paddingTop: "100px",
         paddingBottom: "150px",
-        backgroundImage: "linear-gradient(#B4FFA0 55%, #ffffff 0%)",
+        backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
       }}>
       <div className={classes.hero_container}>
         <Swiper

@@ -7,7 +7,7 @@ import NftGems from './../../assets/Images/News/NftGems.png';
 const useStyles = makeStyles((theme) => ({
     asSeenOn: {
         position: 'relative',
-        backgroundColor: '#FFF',
+        backgroundColor: '#E5E5E5',
         paddingTop: theme.spacing(10),
         paddingBottom: theme.spacing(10),
         [theme.breakpoints.down("sm")]: {

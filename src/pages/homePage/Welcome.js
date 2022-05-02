@@ -5,17 +5,14 @@ import Kyle from './../../assets/Images/serene.png';
 import WelcomeArrows from './../../assets/Images/welcomeArrows.png';
 const useStyles = makeStyles((theme) => ({
     welcome: {
-        backgroundColor: '#EFEFEF',
-        paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(10),
-        [theme.breakpoints.down("sm")]: {
-            paddingTop: theme.spacing(9),
-            paddingBottom: theme.spacing(9),
-        },
-        [theme.breakpoints.down("xs")]: {
-            paddingTop: theme.spacing(8),
-            paddingBottom: theme.spacing(8),
-        }
+        backgroundColor: '#E5E5E5ff',
+        // paddingBottom: theme.spacing(10),
+        // [theme.breakpoints.down("sm")]: {
+        //     paddingBottom: theme.spacing(9),
+        // },
+        // [theme.breakpoints.down("xs")]: {
+        //     paddingBottom: theme.spacing(8),
+        // }
     },
     welcomeTopWrapper: {
         display: 'flex',

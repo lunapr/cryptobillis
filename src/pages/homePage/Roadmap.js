@@ -5,14 +5,16 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     roadmap: {
         position: 'relative',
-        backgroundColor: '#EFEFEF',
+        backgroundColor: '#E5E5E5',
         paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(5),
+        paddingBottom: theme.spacing(10),
         [theme.breakpoints.down("sm")]: {
             paddingTop: theme.spacing(9),
+            paddingBottom: theme.spacing(9),
         },
         [theme.breakpoints.down("xs")]: {
             paddingTop: theme.spacing(8),
+            paddingBottom: theme.spacing(8),
         }
     },
     roadmapTitle: {
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     roadmapCard: {
         display: 'flex',
         alignItems: 'center',
-        background: '#ffffff',
+        background: '#F9F9F9',
         boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
         borderRadius: 24,
         padding: theme.spacing(4),

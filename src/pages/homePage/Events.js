@@ -6,15 +6,13 @@ import MusicFestival from './../../assets/Images/musicFestival.png';
 const useStyles = makeStyles((theme) => ({
     events: {
         position: 'relative',
-        backgroundColor: '#EFEFEF',
-        paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(5),
+        backgroundColor: '#E5E5E5',
+        paddingBottom: theme.spacing(15),
         [theme.breakpoints.down("sm")]: {
-            paddingTop: theme.spacing(9),
+            paddingBottom: theme.spacing(12),
         },
         [theme.breakpoints.down("xs")]: {
-            paddingTop: theme.spacing(8),
-        }
+            paddingBottom: theme.spacing(9),        }
     },
     eventsTitle: {
         fontWeight: 800,
