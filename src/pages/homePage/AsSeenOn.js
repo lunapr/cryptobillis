@@ -34,25 +34,21 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         background: '#f9f9f9',
-        // boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
         borderRadius: 24,
         padding: theme.spacing(4),
-        // marginBottom: theme.spacing(5),
         [theme.breakpoints.down("sm")]: {
             borderRadius: 20,
             padding: theme.spacing(3),
-            // marginBottom: theme.spacing(4),
         },
         [theme.breakpoints.down("xs")]: {
-            flexDirection:'column',
+            flexDirection: 'column',
             borderRadius: 16,
             padding: theme.spacing(2),
-            // marginBottom: theme.spacing(3),
         }
     },
-    asSeenOnImage:{
-        display:'block',
-        width:'100%',
+    asSeenOnImage: {
+        display: 'block',
+        width: '100%',
     },
 }));
 
@@ -68,18 +64,18 @@ export default function AsSeenOn(props) {
                         <Typography variant='h2' className={classes.asSeenOnTitle}>As Seen On</Typography>
                     </Grid>
                 </Grid>
-                <Grid container spacing={4}>
-                    <Grid item xs={12} sm={4} md={4}>
+                <Grid container spacing={4} alignItems='center' justifyContent='center'>
+                    <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
                             <img src={CoinMarket} className={classes.asSeenOnImage}></img>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={4} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
                             <img src={NftGems} className={classes.asSeenOnImage}></img>
                         </div>
                     </Grid>
-                    <Grid item xs={12} sm={4} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
                             <img src={NewsBtc} className={classes.asSeenOnImage}></img>
                         </div>
