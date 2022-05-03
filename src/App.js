@@ -1,31 +1,26 @@
 /** @format */
 
-import { Container, Grid, Link } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Drawer from "@material-ui/core/Drawer";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import { Twitter } from "@material-ui/icons";
+import MenuIcon from "@material-ui/icons/Menu";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
-import Logo from './assets/Images/cryptologo.png';
+import { Route, Routes } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import Logo from "./assets/Images/cryptologo.png";
 import HomePage from "./pages/homePage/Index";
-import { Twitter } from '@material-ui/icons';
-import Hidden from '@material-ui/core/Hidden';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import clsx from 'clsx';
-import MenuIcon from '@material-ui/icons/Menu';
-import IconButton from '@material-ui/core/IconButton';
-
-
 
 // import { HashLink } from 'react-router-hash-link';
 
@@ -58,21 +53,21 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: 32,
-    display: 'block',
-    margin: '0 auto',
+    display: "block",
+    margin: "0 auto",
     [theme.breakpoints.down("sm")]: {
       height: 24,
     },
     [theme.breakpoints.down("xs")]: {
       height: 16,
-      margin: 'unset'
+      margin: "unset",
     },
   },
   socialWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end'
-  }
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
 }));
 
 function ElevationScroll(props) {
@@ -113,8 +108,6 @@ export default function ElevateAppBar(props) {
     setOpen(false);
   };
 
-
-
   return (
     <React.Fragment>
       <CssBaseline />
@@ -122,15 +115,17 @@ export default function ElevateAppBar(props) {
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar disableGutters>
             <Container>
-              <Grid container alignItems="center" justifyContent="space-between">
+              <Grid
+                container
+                alignItems="center"
+                justifyContent="space-between">
                 <Hidden xsSm>
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
                     onClick={handleDrawerOpen}
                     edge="start"
-                    className={clsx(classes.menuButton, open && classes.hide)}
-                  >
+                    className={clsx(classes.menuButton, open && classes.hide)}>
                     <MenuIcon />
                   </IconButton>
                   <Drawer
@@ -140,26 +135,34 @@ export default function ElevateAppBar(props) {
                     open={open}
                     classes={{
                       paper: classes.drawerPaper,
-                    }}
-                  >
+                    }}>
                     <List>
                       <ListItem button>
                         <ListItemText>
-                          <Link className={classes.headerNavLink}>
+                          <Link
+                            smooth
+                            to="/#about-us"
+                            className={classes.headerNavLink}>
                             ABOUT US
                           </Link>
                         </ListItemText>
                       </ListItem>
                       <ListItem button>
                         <ListItemText>
-                          <Link className={classes.headerNavLink}>
+                          <Link
+                            smooth
+                            to="/#roadmap"
+                            className={classes.headerNavLink}>
                             ROADMAP
                           </Link>
                         </ListItemText>
                       </ListItem>
                       <ListItem button>
                         <ListItemText>
-                          <Link className={classes.headerNavLink}>
+                          <Link
+                            smooth
+                            to="/#team"
+                            className={classes.headerNavLink}>
                             TEAM
                           </Link>
                         </ListItemText>
@@ -169,24 +172,26 @@ export default function ElevateAppBar(props) {
                 </Hidden>
                 <Hidden xsDown>
                   <Grid item xs>
-                    <Link className={classes.headerNavLink}>
+                    <Link
+                      smooth
+                      to="/#about-us"
+                      className={classes.headerNavLink}>
                       ABOUT US
                     </Link>
-                    <Link className={classes.headerNavLink}>
+                    <Link
+                      smooth
+                      to="/#roadmap"
+                      className={classes.headerNavLink}>
                       ROADMAP
                     </Link>
-                    <Link className={classes.headerNavLink}>
+                    <Link smooth to="/#team" className={classes.headerNavLink}>
                       TEAM
                     </Link>
                   </Grid>
                 </Hidden>
                 <Grid item xs>
                   <a href="/">
-                    <img
-                      src={Logo}
-                      alt=""
-                      className={classes.logo}
-                    />
+                    <img src={Logo} alt="" className={classes.logo} />
                   </a>
                 </Grid>
                 <Grid item xs>
@@ -202,7 +207,9 @@ export default function ElevateAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </React.Fragment>
   );
 }

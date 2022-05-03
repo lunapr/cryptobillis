@@ -95,7 +95,10 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     textAlign: "center",
     width: "100vw",
-    height: "365px",
+    height: "345px",
+    [theme.breakpoints.down("sm")]: {
+      height: "250px",
+    },
   },
   sec_container: {
     position: "absolute",
@@ -103,9 +106,9 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     textAlign: "center",
     width: "100%",
-    height: "612px",
+    height: "595px",
     [theme.breakpoints.down("sm")]: {
-      height: "616px",
+      height: "515px",
     },
   },
   skins: {
@@ -260,7 +263,7 @@ export default function HomeHero(props) {
           className={classes.skins}>
           {skins.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Skin" />
                 </Container>
@@ -283,7 +286,7 @@ export default function HomeHero(props) {
           className={classes.hairs}>
           {hairs.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Hair" />
                 </Container>
@@ -307,7 +310,7 @@ export default function HomeHero(props) {
           className={classes.mouths}>
           {mouths.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Mouth" />
                 </Container>
@@ -330,7 +333,7 @@ export default function HomeHero(props) {
           className={classes.glasses}>
           {glasses.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Glass" />
                 </Container>
@@ -354,7 +357,7 @@ export default function HomeHero(props) {
           className={classes.piercings}>
           {piercings.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Piercing" />
                 </Container>
@@ -377,7 +380,7 @@ export default function HomeHero(props) {
           className={classes.earings}>
           {earings.map((item) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={item}>
                 <Container maxWidth="sm">
                   <img className={classes.imgStyle} src={item} alt="Earing" />
                 </Container>
