@@ -33,9 +33,10 @@ const useStyles = makeStyles((theme) => ({
     asSeenOnCard: {
         display: 'flex',
         alignItems: 'center',
-        background: '#f9f9f9',
+        background: '#fff',
         borderRadius: 24,
         padding: theme.spacing(4),
+        height:'100%',
         [theme.breakpoints.down("sm")]: {
             borderRadius: 20,
             padding: theme.spacing(3),
@@ -64,7 +65,7 @@ export default function AsSeenOn(props) {
                         <Typography variant='h2' className={classes.asSeenOnTitle}>As Seen On</Typography>
                     </Grid>
                 </Grid>
-                <Grid container spacing={4} alignItems='center' justifyContent='center'>
+                <Grid container spacing={4} justifyContent='center'>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
                             <img alt='' src={CoinMarket} className={classes.asSeenOnImage}></img>

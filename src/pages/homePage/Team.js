@@ -6,6 +6,8 @@ import React from "react";
 import Kyle from "./../../assets/Images/kyle.png";
 import Lillis from "./../../assets/Images/lills.png";
 import Serene from "./../../assets/Images/serene.png";
+import { Instagram, LinkedIn } from "@material-ui/icons";
+
 const useStyles = makeStyles((theme) => ({
   team: {
     position: "relative",
@@ -35,10 +37,11 @@ const useStyles = makeStyles((theme) => ({
   teamCard: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     alignItems: "center",
     background: "#ffffff",
     borderRadius: 24,
+    height:'100%',
     boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
@@ -72,7 +75,29 @@ const useStyles = makeStyles((theme) => ({
   teamCardSubtitle: {
     fontWeight: 900,
     color: "rgba(0,0,0,0.5)",
+    marginBottom: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: theme.spacing(1.5),
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: theme.spacing(1),
+    },
   },
+  socialWrapper:{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  footerIcons: {
+    color: '#000',
+    marginLeft:4,
+    marginRight:4,
+  },
+  discordIcon: {
+    width: 24,
+    marginLeft: 8,
+    marginRight: 8,
+  }
 }));
 
 export default function Team(props) {
@@ -100,6 +125,9 @@ export default function Team(props) {
                 className={classes.teamCardSubtitle}>
                 CO-FOUNDER
               </Typography>
+              <div className={classes.socialWrapper}>
+                <a href="https://instagram.com/lillyhorani99?igshid=YmMyMTA2M2Y=" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
+              </div>
             </div>
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
@@ -152,6 +180,10 @@ export default function Team(props) {
                 className={classes.teamCardSubtitle}>
                 DEVELOPER
               </Typography>
+              <div className={classes.socialWrapper}>
+                <a href="https://www.linkedin.com/in/kyle-lenout-569140226" target='_blank' rel="noreferrer"><LinkedIn className={classes.footerIcons} /></a>
+                <a href="https://instagram.com/kylenout?igshid=YmMyMTA2M2Y=" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
+              </div>
             </div>
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
@@ -165,6 +197,10 @@ export default function Team(props) {
                 className={classes.teamCardSubtitle}>
                 MARKETING
               </Typography>
+              <div className={classes.socialWrapper}>
+                <a href="https://www.linkedin.com/in/shawnee-sande" target='_blank' rel="noreferrer"><LinkedIn className={classes.footerIcons} /></a>
+                <a href="https://instagram.com/shawneesande?igshid=YmMyMTA2M2Y=" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
+              </div>
             </div>
           </Grid>
         </Grid>

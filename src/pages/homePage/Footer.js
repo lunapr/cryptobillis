@@ -1,8 +1,10 @@
 import React from 'react';
 import { Grid, Typography, Container, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Twitter } from '@material-ui/icons';
 import Paper from '@material-ui/core/Paper';
+import Discord from "./../../assets/Images/discord.png";
+import { Twitter, Instagram } from "@material-ui/icons";
+
 // import InputBase from '@material-ui/core/InputBase';
 // import Divider from '@material-ui/core/Divider';
 // import IconButton from '@material-ui/core/IconButton';
@@ -105,7 +107,14 @@ const useStyles = makeStyles((theme) => ({
                 outline: 0
             }
         }
-    }
+    },
+    discordIcon:{
+        width:24,
+        marginLeft:8,
+        marginRight:8,
+        marginTop:5,
+        filter:'invert()'
+      }
 }));
 
 export default function Footer(props) {
@@ -125,9 +134,11 @@ export default function Footer(props) {
                             <div className={classes.footerSubscribeFlex}>
                                 <Typography variant="subtitle2" className={classes.footerBody}>Subscribe for updates & newsletters.</Typography>
                                 <div className={classes.footerLabelFlex}>
-                                    <Twitter className={classes.footerIcons} />
-                                    <Twitter className={classes.footerIcons} />
-                                    <Twitter className={classes.footerIcons} />
+                                    <a href="https://twitter.com/CryptoBillisNFT" target='_blank' rel="noreferrer"><Twitter className={classes.footerIcons} /></a>
+                                    <a href="https://discord.com/invite/VXxhFHARrT" target='_blank' rel="noreferrer">
+                                        <img alt='' src={Discord} className={classes.discordIcon} />
+                                    </a>
+                                    <a href="https://www.instagram.com/cryptobilli/" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
                                 </div>
                             </div>
                             <Paper component="form" className={classes.subscribeWrapper}>

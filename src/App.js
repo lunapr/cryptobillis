@@ -12,7 +12,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import { Twitter } from "@material-ui/icons";
+import { Twitter, Instagram } from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -20,6 +20,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import Logo from "./assets/Images/cryptologo.png";
+import Discord from "./assets/Images/discord.png";
 import HomePage from "./pages/homePage/Index";
 
 // import { HashLink } from 'react-router-hash-link';
@@ -68,6 +69,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "flex-end",
   },
+  footerIcons:{
+    color:'#000',
+  },
+  discordIcon:{
+    width:24,
+    marginLeft:8,
+    marginRight:8,
+  }
 }));
 
 function ElevationScroll(props) {
@@ -196,9 +205,11 @@ export default function ElevateAppBar(props) {
                 </Grid>
                 <Grid item xs>
                   <div className={classes.socialWrapper}>
-                    <Twitter className={classes.footerIcons} />
-                    <Twitter className={classes.footerIcons} />
-                    <Twitter className={classes.footerIcons} />
+                    <a href="https://twitter.com/CryptoBillisNFT" target='_blank' rel="noreferrer"><Twitter className={classes.footerIcons} /></a>
+                    <a href="https://discord.com/invite/VXxhFHARrT" target='_blank' rel="noreferrer">
+                      <img alt="" src={Discord} className={classes.discordIcon}/>
+                    </a>
+                    <a href="https://www.instagram.com/cryptobilli/" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
                   </div>
                 </Grid>
               </Grid>

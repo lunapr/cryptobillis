@@ -3,6 +3,7 @@ import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PokerNights from './../../assets/Images/pokernights.png';
 import MusicFestival from './../../assets/Images/musicFestival.png';
+import Fourmulaf1 from './../../assets/Images/fourmulaf1.png';
 const useStyles = makeStyles((theme) => ({
     events: {
         position: 'relative',
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
     eventsCardTwo: {
         backgroundImage: `url(${MusicFestival})`,
-        backgroundSize: 'center',
+        backgroundSize: 'cover',
         minHeight: 529,
         width: '100%',
         // backgroundSize: 'cover',
@@ -102,8 +103,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     eventsCardThree: {
-        backgroundImage: `url(${MusicFestival})`,
-        backgroundSize: 'center',
+        backgroundImage: `url(${Fourmulaf1})`,
+        backgroundSize: 'cover',
         minHeight: 529,
         width: '100%',
         // backgroundSize: 'cover',
