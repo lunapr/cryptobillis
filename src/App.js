@@ -119,7 +119,7 @@ export default function ElevateAppBar(props) {
                 container
                 alignItems="center"
                 justifyContent="space-between">
-                <Hidden xsSm>
+                <Hidden smUp>
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
