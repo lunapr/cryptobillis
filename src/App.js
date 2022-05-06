@@ -104,9 +104,9 @@ export default function ElevateAppBar(props) {
     setOpen(true);
   };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  // const handleDrawerClose = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <React.Fragment>

@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
     eventsCardOne: {
         backgroundImage: `url(${PokerNights})`,
-        backgroundSize: 'center',
+        // backgroundSize: 'center',
         minHeight: 529,
         width: '100%',
         backgroundSize: 'cover',

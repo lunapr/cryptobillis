@@ -67,17 +67,17 @@ export default function AsSeenOn(props) {
                 <Grid container spacing={4} alignItems='center' justifyContent='center'>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img src={CoinMarket} className={classes.asSeenOnImage}></img>
+                            <img alt='' src={CoinMarket} className={classes.asSeenOnImage}></img>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img src={NftGems} className={classes.asSeenOnImage}></img>
+                            <img alt='' src={NftGems} className={classes.asSeenOnImage}></img>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img src={NewsBtc} className={classes.asSeenOnImage}></img>
+                            <img alt='' src={NewsBtc} className={classes.asSeenOnImage}></img>
                         </div>
                     </Grid>
                 </Grid>

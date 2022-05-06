@@ -91,7 +91,7 @@ export default function Team(props) {
         <Grid container spacing={4}>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Lillis} className={classes.teamCardImg}></img>
+              <img alt="" src={Lillis} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 LILLY
               </Typography>
@@ -104,7 +104,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Serene} className={classes.teamCardImg}></img>
+              <img alt="" src={Serene} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 SERENE
               </Typography>
@@ -117,7 +117,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Lillis} className={classes.teamCardImg}></img>
+              <img alt="" src={Lillis} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 OLEG
               </Typography>
@@ -130,7 +130,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Kyle} className={classes.teamCardImg}></img>
+              <img alt="" src={Kyle} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 CALEB
               </Typography>
@@ -143,7 +143,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Kyle} className={classes.teamCardImg}></img>
+              <img alt="" src={Kyle} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 KYLE LENOUT
               </Typography>
@@ -156,7 +156,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img src={Serene} className={classes.teamCardImg}></img>
+              <img alt="" src={Serene} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 SHAWNEE
               </Typography>

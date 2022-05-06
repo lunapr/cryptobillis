@@ -101,7 +101,7 @@ export default function Welcome(props) {
           </Grid>
           <Grid item xs={12}>
             <div className={classes.welcomeTopWrapper}>
-              <img src={WelcomeArrows} className={classes.welcomeArrow}></img>
+              <img alt="" src={WelcomeArrows} className={classes.welcomeArrow}></img>
               <Typography variant="h2" className={classes.welcomeTitle}>
                 METAVERSE
               </Typography>
@@ -109,7 +109,7 @@ export default function Welcome(props) {
           </Grid>
           <Grid item xs={12}>
             <div className={classes.welcomeCard}>
-              <img src={Kyle} className={classes.welcomeFeature}></img>
+              <img alt="" src={Kyle} className={classes.welcomeFeature}></img>
               <Typography variant="h6" className={classes.welcomeBody}>
                 The CRYPTOBILLI$ are hosting a concert in WEB3. We love to
                 listen to LIVE music, so we are putting together a music
