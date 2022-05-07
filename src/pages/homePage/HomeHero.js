@@ -245,7 +245,7 @@ export default function HomeHero(props) {
     <div
       style={{
         paddingTop: "100px",
-        paddingBottom: "150px",
+        paddingBottom: "5em",
         backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
       }}>
       <div className={classes.hero_container}>

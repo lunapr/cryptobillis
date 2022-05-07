@@ -157,7 +157,7 @@ export default function Footer(props) {
                         <Grid item xs={12}>
                             <div className={classes.footerLabelFlex}>
                                 <Typography variant="subtitle2" className={classes.footerLabelText}>All Rights Reserved.</Typography>
-                                <Typography variant="subtitle2" className={classes.footerLabelText}>Made with Love by<span className={classes.withLove}>Luna PR</span></Typography>
+                                {/* <Typography variant="subtitle2" className={classes.footerLabelText}>Made with Love by<span className={classes.withLove}>Luna PR</span></Typography> */}
                             </div>
                         </Grid>
                     </Grid>

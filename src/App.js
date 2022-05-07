@@ -22,6 +22,9 @@ import { HashLink as Link } from "react-router-hash-link";
 import Logo from "./assets/Images/cryptologo.png";
 import Discord from "./assets/Images/discord.png";
 import HomePage from "./pages/homePage/Index";
+// import Crypto from './assets/Images/crypto.png';
+// import Star from './assets/Images/star.png';
+
 
 // import { HashLink } from 'react-router-hash-link';
 
@@ -69,13 +72,32 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "flex-end",
   },
-  footerIcons:{
-    color:'#000',
+  footerIcons: {
+    color: '#000',
   },
-  discordIcon:{
-    width:24,
-    marginLeft:8,
-    marginRight:8,
+  discordIcon: {
+    width: 24,
+    marginLeft: 8,
+    marginRight: 8,
+  },
+  blackHeader: {
+    backgroundColor: '#000',
+    padding: 8,
+    '& img': {
+      width: '1%',
+      display: 'block',
+      flex: 1,
+      marginLeft: 4,
+      marginRight: 4,
+    }
+  },
+  star: {
+    maxWidth: 32,
+  },
+  flexWrap: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 }));
 
@@ -207,7 +229,7 @@ export default function ElevateAppBar(props) {
                   <div className={classes.socialWrapper}>
                     <a href="https://twitter.com/CryptoBillisNFT" target='_blank' rel="noreferrer"><Twitter className={classes.footerIcons} /></a>
                     <a href="https://discord.com/invite/VXxhFHARrT" target='_blank' rel="noreferrer">
-                      <img alt="" src={Discord} className={classes.discordIcon}/>
+                      <img alt="" src={Discord} className={classes.discordIcon} />
                     </a>
                     <a href="https://www.instagram.com/cryptobilli/" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
                   </div>
@@ -215,6 +237,23 @@ export default function ElevateAppBar(props) {
               </Grid>
             </Container>
           </Toolbar>
+          {/* <div className={classes.blackHeader}>
+            <div className={classes.flexWrap}>
+              <img src={Star} className={classes.star} />
+              <img src={Crypto} />
+              <img src={Star} className={classes.star} />
+              <img src={Crypto} />
+              <img src={Star} className={classes.star} />
+              <Hidden xsDown>
+                <img src={Crypto} />
+                <img src={Star} className={classes.star} />
+              </Hidden>
+              <Hidden smDown>
+                <img src={Crypto} />
+                <img src={Star} className={classes.star} />
+              </Hidden>
+            </div>
+          </div> */}
         </AppBar>
       </ElevationScroll>
       <Toolbar />

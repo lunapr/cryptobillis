@@ -3,9 +3,10 @@
 import { Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import Kyle from "./../../assets/Images/kyle.png";
+import Ahmad from "./../../assets/Images/ahmad.jpg";
 import Lillis from "./../../assets/Images/lills.png";
 import Serene from "./../../assets/Images/serene.png";
+import Oleg from "./../../assets/Images/oleg.jpg";
 import { Instagram, LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -145,45 +146,15 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img alt="" src={Lillis} className={classes.teamCardImg}></img>
+              <img alt="" src={Ahmad} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
-                OLEG
+                AHMAD
               </Typography>
               <Typography
                 variant="subtitle1"
                 className={classes.teamCardSubtitle}>
-                3D ANIMATOR
+                CO-FOUNDER
               </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={4} md={4}>
-            <div className={classes.teamCard}>
-              <img alt="" src={Kyle} className={classes.teamCardImg}></img>
-              <Typography variant="h4" className={classes.teamCardTitle}>
-                CALEB
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                className={classes.teamCardSubtitle}>
-                MARKETING
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={4} md={4}>
-            <div className={classes.teamCard}>
-              <img alt="" src={Kyle} className={classes.teamCardImg}></img>
-              <Typography variant="h4" className={classes.teamCardTitle}>
-                KYLE LENOUT
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                className={classes.teamCardSubtitle}>
-                DEVELOPER
-              </Typography>
-              <div className={classes.socialWrapper}>
-                <a href="https://www.linkedin.com/in/kyle-lenout-569140226" target='_blank' rel="noreferrer"><LinkedIn className={classes.footerIcons} /></a>
-                <a href="https://instagram.com/kylenout?igshid=YmMyMTA2M2Y=" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
-              </div>
             </div>
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
@@ -201,6 +172,19 @@ export default function Team(props) {
                 <a href="https://www.linkedin.com/in/shawnee-sande" target='_blank' rel="noreferrer"><LinkedIn className={classes.footerIcons} /></a>
                 <a href="https://instagram.com/shawneesande?igshid=YmMyMTA2M2Y=" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
               </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={4} md={4}>
+            <div className={classes.teamCard}>
+              <img alt="" src={Oleg} className={classes.teamCardImg}></img>
+              <Typography variant="h4" className={classes.teamCardTitle}>
+                OLEG
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                className={classes.teamCardSubtitle}>
+                3D ANIMATOR
+              </Typography>
             </div>
           </Grid>
         </Grid>
