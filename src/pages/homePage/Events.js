@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
             borderRadius: 16,
             backgroundColor: '#000',
             backgroundSize: 'contain',
-            backgroundPosition: 'bottom',
+            backgroundPosition: 'bottom right',
             backgroundRepeat: 'no-repeat',
         }
     },
@@ -140,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
             paddingBottom: theme.spacing(25),
             backgroundColor: '#000',
             backgroundSize: 'contain',
-            backgroundPosition: 'bottom',
+            backgroundPosition: 'bottom left',
             backgroundRepeat: 'no-repeat',
             minHeight: 'unset'
         }
