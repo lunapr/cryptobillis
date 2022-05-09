@@ -24,7 +24,7 @@ import Discord from "./assets/Images/discord.png";
 import HomePage from "./pages/homePage/Index";
 import Crypto from './assets/Images/crypto.png';
 import Star from './assets/Images/star.png';
-import Slider from "react-slick";
+import Slider from 'react-slick';
 // import "slick-carousel/slick/slick.css";
 
 // import "slick-carousel/slick/slick-theme.css";
