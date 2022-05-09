@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PokerNights from './../../assets/Images/pokernights.png';
 import MusicFestival from './../../assets/Images/musicFestival.png';
 import Fourmulaf1 from './../../assets/Images/fourmulaf1.png';
+import FerrariMobile from './../../assets/Images/ferrariMobile.png';
 const useStyles = makeStyles((theme) => ({
     events: {
         position: 'relative',
@@ -40,8 +41,16 @@ const useStyles = makeStyles((theme) => ({
             padding: theme.spacing(4),
         },
         [theme.breakpoints.down("xs")]: {
-            padding: theme.spacing(3),
+            minHeight: 'unset',
+            paddingTop: theme.spacing(3),
+            paddingLeft: theme.spacing(3),
+            paddingRight: theme.spacing(3),
+            paddingBottom: theme.spacing(15),
             borderRadius: 16,
+            backgroundColor: '#000',
+            backgroundSize: 'contain',
+            backgroundPosition: 'bottom',
+            backgroundRepeat: 'no-repeat',
         }
     },
     eventCardOneTitle: {
@@ -51,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     eventsCardTwo: {
         backgroundImage: `url(${MusicFestival})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         minHeight: 529,
         width: '100%',
         // backgroundSize: 'cover',
@@ -63,10 +73,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(3),
             borderRadius: 20,
+
         },
         [theme.breakpoints.down("xs")]: {
-            padding: theme.spacing(2),
+            padding: theme.spacing(8, 2),
             borderRadius: 16,
+            minHeight: 'unset',
+            textAlign: 'center',
         }
     },
     eventCardBody: {
@@ -120,14 +133,23 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down("xs")]: {
             borderRadius: 16,
-            padding: theme.spacing(2),
+            backgroundImage: `url(${FerrariMobile})`,
+            paddingTop: theme.spacing(2),
+            paddingLeft: theme.spacing(2),
+            paddingRight: theme.spacing(2),
+            paddingBottom: theme.spacing(25),
+            backgroundColor: '#000',
+            backgroundSize: 'contain',
+            backgroundPosition: 'bottom',
+            backgroundRepeat: 'no-repeat',
+            minHeight: 'unset'
         }
     },
     eventCardThreeTitle: {
         fontWeight: 800,
         color: '#E65357',
     },
-    eventCardThreeBody:{
+    eventCardThreeBody: {
         fontWeight: 400,
         color: '#FFFFFF',
         textAlign: 'right',
@@ -138,7 +160,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down("xs")]: {
             marginBottom: theme.spacing(1),
-        } 
+        }
     }
 }));
 
