@@ -22,8 +22,8 @@ import { HashLink as Link } from "react-router-hash-link";
 import Logo from "./assets/Images/cryptologo.png";
 import Discord from "./assets/Images/discord.png";
 import HomePage from "./pages/homePage/Index";
-// import Crypto from './assets/Images/crypto.png';
-// import Star from './assets/Images/star.png';
+import Crypto from './assets/Images/crypto.png';
+import Star from './assets/Images/star.png';
 
 
 // import { HashLink } from 'react-router-hash-link';
@@ -237,23 +237,23 @@ export default function ElevateAppBar(props) {
               </Grid>
             </Container>
           </Toolbar>
-          {/* <div className={classes.blackHeader}>
+          <div className={classes.blackHeader}>
             <div className={classes.flexWrap}>
-              <img src={Star} className={classes.star} />
-              <img src={Crypto} />
-              <img src={Star} className={classes.star} />
-              <img src={Crypto} />
-              <img src={Star} className={classes.star} />
+              <img alt="" src={Star} className={classes.star} />
+              <img alt="" src={Crypto} />
+              <img alt="" src={Star} className={classes.star} />
+              <img alt="" src={Crypto} />
+              <img alt="" src={Star} className={classes.star} />
               <Hidden xsDown>
-                <img src={Crypto} />
-                <img src={Star} className={classes.star} />
+                <img alt="" src={Crypto} />
+                <img alt="" src={Star} className={classes.star} />
               </Hidden>
               <Hidden smDown>
-                <img src={Crypto} />
-                <img src={Star} className={classes.star} />
+                <img alt="" src={Crypto} />
+                <img alt="" src={Star} className={classes.star} />
               </Hidden>
             </div>
-          </div> */}
+          </div>
         </AppBar>
       </ElevationScroll>
       <Toolbar />
