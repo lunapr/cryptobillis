@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "contain",
     width: "100%",
     maxWidth: 213,
+    mixBlendMode: 'darken',
   },
   teamCardTitle: {
     fontWeight: 900,
