@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   },
   blackHeader: {
     backgroundColor: '#000',
-    padding: 8,
+    padding: theme.spacing(0,1),
     '& img': {
       width: '1%',
       display: 'block',
@@ -92,12 +92,15 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   star: {
-    maxWidth: 32,
+    maxWidth: 24,
   },
   flexWrap: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  crypto:{
+    padding:16,
   }
 }));
 
@@ -240,16 +243,16 @@ export default function ElevateAppBar(props) {
           <div className={classes.blackHeader}>
             <div className={classes.flexWrap}>
               <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} />
+              <img alt="" src={Crypto} className={classes.crypto}/>
               <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} />
+              <img alt="" src={Crypto} className={classes.crypto}/>
               <img alt="" src={Star} className={classes.star} />
               <Hidden xsDown>
-                <img alt="" src={Crypto} />
+                <img alt="" src={Crypto} className={classes.crypto}/>
                 <img alt="" src={Star} className={classes.star} />
               </Hidden>
               <Hidden smDown>
-                <img alt="" src={Crypto} />
+                <img alt="" src={Crypto} className={classes.crypto}/>
                 <img alt="" src={Star} className={classes.star} />
               </Hidden>
             </div>

@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import Kyle from "./../../assets/Images/serene.png";
 import WelcomeArrows from "./../../assets/Images/welcomeArrows.png";
+// import NewsBtc from './../../assets/Images/News/newsBtc.png';
+
 const useStyles = makeStyles((theme) => ({
   welcome: {
     backgroundColor: "#E5E5E5ff",
