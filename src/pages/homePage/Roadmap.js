@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     background: "#F9F9F9",
-    boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
     borderRadius: 24,
     padding: theme.spacing(4),
     marginBottom: theme.spacing(5),
+    cursor: 'pointer',
     [theme.breakpoints.down("sm")]: {
       borderRadius: 20,
       padding: theme.spacing(3),
@@ -49,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       marginBottom: theme.spacing(3),
     },
+    '&:hover': {
+      background: "#fff",
+      boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
+    }
   },
   roadmapDate: {
     fontWeight: 700,

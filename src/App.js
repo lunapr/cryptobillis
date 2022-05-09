@@ -24,7 +24,10 @@ import Discord from "./assets/Images/discord.png";
 import HomePage from "./pages/homePage/Index";
 import Crypto from './assets/Images/crypto.png';
 import Star from './assets/Images/star.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
+import "slick-carousel/slick/slick-theme.css";
 
 // import { HashLink } from 'react-router-hash-link';
 
@@ -82,25 +85,36 @@ const useStyles = makeStyles((theme) => ({
   },
   blackHeader: {
     backgroundColor: '#000',
-    padding: theme.spacing(0,1),
+    padding: theme.spacing(0, 1),
     '& img': {
-      width: '1%',
+      // width: '1%',
       display: 'block',
-      flex: 1,
+      // flex: 1,
       marginLeft: 4,
       marginRight: 4,
+      // width: 'fit-content'
+    },
+    '& .slick-track': {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    '& .slick-initialized .slick-slide':{
+      width: 'fit-content !important'
     }
   },
   star: {
     maxWidth: 24,
+    // width: 'fit-content !important'
   },
   flexWrap: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  crypto:{
-    padding:16,
+  crypto: {
+    padding: 16,
+    width:'282px !important'
   }
 }));
 
@@ -138,6 +152,19 @@ export default function ElevateAppBar(props) {
     setOpen(true);
   };
 
+  const settings = {
+    focusOnSelect: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    initialSlide: 0,
+    cssEase: "linear"
+  };
   // const handleDrawerClose = () => {
   //   setOpen(false);
   // };
@@ -241,21 +268,17 @@ export default function ElevateAppBar(props) {
             </Container>
           </Toolbar>
           <div className={classes.blackHeader}>
-            <div className={classes.flexWrap}>
+            <Slider {...settings}>
               <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto}/>
+              <img alt="" src={Crypto} className={classes.crypto} />
               <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto}/>
+              <img alt="" src={Crypto} className={classes.crypto} />
               <img alt="" src={Star} className={classes.star} />
-              <Hidden xsDown>
-                <img alt="" src={Crypto} className={classes.crypto}/>
-                <img alt="" src={Star} className={classes.star} />
-              </Hidden>
-              <Hidden smDown>
-                <img alt="" src={Crypto} className={classes.crypto}/>
-                <img alt="" src={Star} className={classes.star} />
-              </Hidden>
-            </div>
+              <img alt="" src={Crypto} className={classes.crypto} />
+              <img alt="" src={Star} className={classes.star} />
+              <img alt="" src={Crypto} className={classes.crypto} />
+              <img alt="" src={Star} className={classes.star} />
+            </Slider>
           </div>
         </AppBar>
       </ElevationScroll>

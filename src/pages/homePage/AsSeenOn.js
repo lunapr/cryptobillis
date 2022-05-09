@@ -33,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
     asSeenOnCard: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent:'center',
+        justifyContent: 'center',
         background: '#F9F9F9',
         borderRadius: 24,
         padding: theme.spacing(4),
-        height:'100%',
+        height: '100%',
+        cursor: 'pointer',
         [theme.breakpoints.down("sm")]: {
             borderRadius: 20,
             padding: theme.spacing(3),
@@ -46,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column',
             borderRadius: 16,
             padding: theme.spacing(2),
+        },
+        '&:hover': {
+            background: "#fff",
+            boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
         }
     },
     asSeenOnImage: {
@@ -70,17 +75,17 @@ export default function AsSeenOn(props) {
                 <Grid container spacing={4} justifyContent='center'>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img alt='' src={CoinMarket} className={classes.asSeenOnImage} style={{maxWidth:339}}></img>
+                            <img alt='' src={CoinMarket} className={classes.asSeenOnImage} style={{ maxWidth: 339 }}></img>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img alt='' src={NftGems} className={classes.asSeenOnImage} style={{maxWidth:239}}></img>
+                            <img alt='' src={NftGems} className={classes.asSeenOnImage} style={{ maxWidth: 239 }}></img>
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
                         <div className={classes.asSeenOnCard}>
-                            <img alt='' src={NewsBtc} className={classes.asSeenOnImage} style={{maxWidth:303}}></img>
+                            <img alt='' src={NewsBtc} className={classes.asSeenOnImage} style={{ maxWidth: 303 }}></img>
                         </div>
                     </Grid>
                 </Grid>

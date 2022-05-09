@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     // justifyContent: "space-between",
     alignItems: "center",
-    background: "#ffffff",
+    background: "#F9F9F9",
     borderRadius: 24,
-    height:'100%',
-    boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
+    height: '100%',
+    cursor: 'pointer',
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(4),
@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 16,
       padding: theme.spacing(3),
     },
+    '&:hover': {
+      background: "#fff",
+      boxShadow: "0px 0px 50px rgba(192, 192, 254, 0.25)",
+    }
   },
   teamCardImg: {
     objectFit: "contain",
@@ -84,15 +88,15 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     },
   },
-  socialWrapper:{
+  socialWrapper: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   footerIcons: {
     color: '#000',
-    marginLeft:4,
-    marginRight:4,
+    marginLeft: 4,
+    marginRight: 4,
   },
   discordIcon: {
     width: 24,

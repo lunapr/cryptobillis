@@ -90,6 +90,16 @@ import skin7 from "./../../assets/Images/Skins/IMG_3361.PNG";
 import skin8 from "./../../assets/Images/Skins/IMG_3366.PNG";
 
 const useStyles = makeStyles((theme) => ({
+  heroWrapper: {
+    backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
+    height: '96vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  heroMainWrapper: {
+    position: "relative",
+  },
   hero_container: {
     position: "relative",
     display: "block",
@@ -102,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sec_container: {
     position: "absolute",
-    top: 0,
+    top: -160,
     display: "block",
     textAlign: "center",
     width: "100%",
@@ -242,152 +252,149 @@ export default function HomeHero(props) {
   ];
 
   return (
-    <div
-      style={{
-        paddingTop: "100px",
-        paddingBottom: "5em",
-        backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
-      }}>
-      <div className={classes.hero_container}>
-        <Swiper
-          spaceBetween={20}
-          centeredSlides={true}
-          loop="true"
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            reverseDirection: true,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.skins}>
-          {skins.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Skin" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className={classes.sec_container}>
-        <Swiper
-          spaceBetween={20}
-          centeredSlides={true}
-          loop="true"
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.hairs}>
-          {hairs.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Hair" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className={classes.sec_container}>
-        <Swiper
-          spaceBetween={20}
-          centeredSlides={true}
-          loop="true"
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            reverseDirection: true,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.mouths}>
-          {mouths.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Mouth" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className={classes.sec_container}>
-        <Swiper
-          spaceBetween={20}
-          centeredSlides={true}
-          loop="true"
-          autoplay={{
-            delay: 3200,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.glasses}>
-          {glasses.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Glass" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className={classes.sec_container}>
-        <Swiper
-          spaceBetween={20}
-          centeredSlides={true}
-          loop="true"
-          autoplay={{
-            delay: 4500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            reverseDirection: true,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.piercings}>
-          {piercings.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Piercing" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-      <div className={classes.sec_container}>
-        <Swiper
-          spaceBetween={20}
-          loop="true"
-          centeredSlides={true}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          }}
-          modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
-          className={classes.earings}>
-          {earings.map((item) => {
-            return (
-              <SwiperSlide key={item}>
-                <Container maxWidth="sm">
-                  <img className={classes.imgStyle} src={item} alt="Earing" />
-                </Container>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+    <div className={classes.heroWrapper}>
+      <div className={classes.heroMainWrapper}>
+        <div className={classes.hero_container}>
+          <Swiper
+            spaceBetween={20}
+            centeredSlides={true}
+            loop="true"
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              reverseDirection: true,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.skins}>
+            {skins.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Skin" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div className={classes.sec_container}>
+          <Swiper
+            spaceBetween={20}
+            centeredSlides={true}
+            loop="true"
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.hairs}>
+            {hairs.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Hair" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div className={classes.sec_container}>
+          <Swiper
+            spaceBetween={20}
+            centeredSlides={true}
+            loop="true"
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              reverseDirection: true,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.mouths}>
+            {mouths.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Mouth" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div className={classes.sec_container}>
+          <Swiper
+            spaceBetween={20}
+            centeredSlides={true}
+            loop="true"
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.glasses}>
+            {glasses.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Glass" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div className={classes.sec_container}>
+          <Swiper
+            spaceBetween={20}
+            centeredSlides={true}
+            loop="true"
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              reverseDirection: true,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.piercings}>
+            {piercings.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Piercing" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div className={classes.sec_container}>
+          <Swiper
+            spaceBetween={20}
+            loop="true"
+            centeredSlides={true}
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            modules={[Autoplay, A11y, Navigation, Scrollbar, Pagination]}
+            className={classes.earings}>
+            {earings.map((item) => {
+              return (
+                <SwiperSlide key={item}>
+                  <Container maxWidth="sm">
+                    <img className={classes.imgStyle} src={item} alt="Earing" />
+                  </Container>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
