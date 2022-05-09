@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(4),
     },
     [theme.breakpoints.down("xs")]: {
+      alignItems: "flex-start",
       flexDirection: "column",
       borderRadius: 16,
       padding: theme.spacing(2),
