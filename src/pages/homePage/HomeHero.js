@@ -6,10 +6,7 @@ import React from "react";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
 //Earing
 import imgearing1 from "./../../assets/Images/Earrings/IMG_2738.PNG";
@@ -92,10 +89,10 @@ import skin8 from "./../../assets/Images/Skins/IMG_3366.PNG";
 const useStyles = makeStyles((theme) => ({
   heroWrapper: {
     backgroundImage: "linear-gradient(#B4FFA0 55%, #E5E5E5 0%)",
-    height: '96vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    height: "96vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   heroMainWrapper: {
     position: "relative",
@@ -259,8 +256,9 @@ export default function HomeHero(props) {
             spaceBetween={20}
             centeredSlides={true}
             loop="true"
+            speed={1250}
             autoplay={{
-              delay: 3000,
+              delay: 8000,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
               reverseDirection: true,
@@ -283,6 +281,7 @@ export default function HomeHero(props) {
             spaceBetween={20}
             centeredSlides={true}
             loop="true"
+            speed={2700}
             autoplay={{
               delay: 9000,
               disableOnInteraction: false,
@@ -306,8 +305,9 @@ export default function HomeHero(props) {
             spaceBetween={20}
             centeredSlides={true}
             loop="true"
+            speed={3300}
             autoplay={{
-              delay: 9000,
+              delay: 10000,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
               reverseDirection: true,
@@ -330,8 +330,9 @@ export default function HomeHero(props) {
             spaceBetween={20}
             centeredSlides={true}
             loop="true"
+            speed={1800}
             autoplay={{
-              delay: 9000,
+              delay: 11000,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
             }}
@@ -353,8 +354,9 @@ export default function HomeHero(props) {
             spaceBetween={20}
             centeredSlides={true}
             loop="true"
+            speed={1500}
             autoplay={{
-              delay: 9000,
+              delay: 11300,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
               reverseDirection: true,
@@ -365,7 +367,11 @@ export default function HomeHero(props) {
               return (
                 <SwiperSlide key={item}>
                   <Container maxWidth="sm">
-                    <img className={classes.imgStyle} src={item} alt="Piercing" />
+                    <img
+                      className={classes.imgStyle}
+                      src={item}
+                      alt="Piercing"
+                    />
                   </Container>
                 </SwiperSlide>
               );
@@ -377,8 +383,9 @@ export default function HomeHero(props) {
             spaceBetween={20}
             loop="true"
             centeredSlides={true}
+            speed={1200}
             autoplay={{
-              delay: 9000,
+              delay: 11500,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
             }}
