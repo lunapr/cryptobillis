@@ -58,10 +58,10 @@ const theme = createTheme({
         h2: {
           fontSize: 96,
           [breakpoints.down("sm")]: {
-            fontSize: 72,
+            fontSize: 64,
           },
           [breakpoints.down("xs")]: {
-            fontSize: 56,
+            fontSize: 48,
           },
         },
         h3: {
@@ -133,10 +133,10 @@ const theme = createTheme({
       h2: {
         fontSize: 96,
         [breakpoints.down("sm")]: {
-          fontSize: 72,
+          fontSize: 64,
         },
         [breakpoints.down("xs")]: {
-          fontSize: 56,
+          fontSize: 48,
         },
       },
       h3: {

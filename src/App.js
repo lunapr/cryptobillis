@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    '& .slick-initialized .slick-slide':{
+    '& .slick-initialized .slick-slide': {
       width: 'fit-content !important'
     }
   },
@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
   },
   crypto: {
     padding: 16,
-    width:'282px !important'
+    width: '282px !important'
   }
 }));
 
@@ -153,7 +153,7 @@ export default function ElevateAppBar(props) {
     focusOnSelect: false,
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,
     speed: 4000,
@@ -266,15 +266,33 @@ export default function ElevateAppBar(props) {
           </Toolbar>
           <div className={classes.blackHeader}>
             <Slider {...settings}>
-              <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto} />
-              <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto} />
-              <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto} />
-              <img alt="" src={Star} className={classes.star} />
-              <img alt="" src={Crypto} className={classes.crypto} />
-              <img alt="" src={Star} className={classes.star} />
+              <div>
+                <img alt="" src={Star} className={classes.star} />
+              </div>
+              <div>
+                <img alt="" src={Crypto} className={classes.crypto} />
+              </div>
+              <div>
+                <img alt="" src={Star} className={classes.star} />
+              </div>
+              <div>
+                <img alt="" src={Crypto} className={classes.crypto} />
+              </div>
+              <div>
+                <img alt="" src={Star} className={classes.star} />
+              </div>
+              <div>
+                <img alt="" src={Crypto} className={classes.crypto} />
+              </div>
+              <div>
+                <img alt="" src={Star} className={classes.star} />
+              </div>
+              <div>
+                <img alt="" src={Crypto} className={classes.crypto} />
+              </div>
+              <div >
+                <img alt="" src={Star} className={classes.star} style={{display:'none'}}/>
+              </div>
             </Slider>
           </div>
         </AppBar>
