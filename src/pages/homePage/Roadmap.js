@@ -97,35 +97,39 @@ export default function Roadmap(props) {
                 <span className={classes.green}>Q1 - 2022</span>
               </Typography>
               <Typography variant="h6" className={classes.roadmapBody}>
-                500 Community Members are Choosen for the whitelist. Each member
-                gets two Free NFTs for each Minted
+                500 community members are chosen for the white-list. Each member gets two (2) free NFTs for each one minted!
               </Typography>
             </div>
             <div className={classes.roadmapCard}>
               <Typography variant="h5" className={classes.roadmapDate}>
-                <span className={classes.orange}>Q1 - 2022</span>
+                <span className={classes.orange}>Q2 - 2022</span>
               </Typography>
               <Typography variant="h6" className={classes.roadmapBody}>
-                500 Community Members are Choosen for the whitelist. Each member
-                gets two Free NFTs for each Minted
+                Events begin in March! We’re doing giveaways for game nights, movie screenings, trivia and more!
               </Typography>
             </div>
             <div className={classes.roadmapCard}>
               <Typography variant="h5" className={classes.roadmapDate}>
-                Q1 - 2022
+                Q3 - 2022
               </Typography>
               <Typography variant="h6" className={classes.roadmapBody}>
-                500 Community Members are Choosen for the whitelist. Each member
-                gets two Free NFTs for each Minted
+                1000 NFTS MINTED : Our 3D market opens in the Metaverse!
               </Typography>
             </div>
             <div className={classes.roadmapCard}>
               <Typography variant="h5" className={classes.roadmapDate}>
-                Q1 - 2022
+                Q4 - 2022
               </Typography>
               <Typography variant="h6" className={classes.roadmapBody}>
-                500 Community Members are Choosen for the whitelist. Each member
-                gets two Free NFTs for each Minted
+                2000 NFTS MINTED : We host special events on our own land in the Metaverse!
+              </Typography>
+            </div>
+            <div className={classes.roadmapCard}>
+              <Typography variant="h5" className={classes.roadmapDate}>
+                Q1 - 2023
+              </Typography>
+              <Typography variant="h6" className={classes.roadmapBody}>
+                3000 NFTS MINTED : The zodiac unlocks. Interstellar features expand the BILLIVER$E!
               </Typography>
             </div>
           </Grid>

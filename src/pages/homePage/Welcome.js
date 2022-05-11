@@ -98,7 +98,7 @@ export default function Welcome(props) {
         <Grid container>
           <Grid item xs={12}>
             <Typography variant="h6" className={classes.welcomePreTitle}>
-              WELCOME TO
+              WELCOME TO THE
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -113,12 +113,7 @@ export default function Welcome(props) {
             <div className={classes.welcomeCard}>
               <img alt="" src={Kyle} className={classes.welcomeFeature}></img>
               <Typography variant="h6" className={classes.welcomeBody}>
-                The CRYPTOBILLI$ are hosting a concert in WEB3. We love to
-                listen to LIVE music, so we are putting together a music
-                festival for NFTS! The CRYPTOBILLI$ are NFTS afterall, providing
-                access to musical performances and SPECIAL EVENTS. Our community
-                is all-inclusive, so why not check out the ROADMAP below to see
-                what’s in the works?
+              CryptoBillis is more than just an NFT that allows you access to events, it’s to remind holders about the path of those that are on their way to becoming Billionaire Billi$ and having a supportive and like-minded community.
               </Typography>
             </div>
           </Grid>

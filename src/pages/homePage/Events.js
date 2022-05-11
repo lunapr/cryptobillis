@@ -179,22 +179,20 @@ export default function Events(props) {
                 <Grid container spacing={4}>
                     <Grid item xs={12}>
                         <div className={classes.eventsCardOne}>
-                            <Typography variant="subtitle2" className={classes.eventCardBody}>Aliquet amet dui, enim sollicitudin leo ipsum lectus mi id. Orci ultrices adipiscing interdum habitant vestibulum.</Typography>
-                            <Typography variant="subtitle2" className={classes.eventCardBody}>Aliquet amet dui, enim sollicitudin leo ipsum lectus mi id. Orci ultrices adipiscing interdum habitant vestibulum.</Typography>
-                            <Typography variant="subtitle2" className={classes.eventCardBody}>Aliquet amet dui, enim sollicitudin leo ipsum lectus mi id. Orci ultrices adipiscing interdum habitant vestibulum.</Typography>
+                            <Typography variant="subtitle2" className={classes.eventCardBody}>Coming Soon! We will be hosting a "Crypto Poker  Cup" once every quarter which will be held in the metaverse! Follow us on Twitter to stay tuned for upcoming updates!</Typography>
                             <Typography variant="h2" className={classes.eventCardOneTitle}>Poker Night</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12}>
                         <div className={classes.eventsCardTwo}>
                             <Typography variant="h2" className={classes.eventCardTwoTitle}>Music Festival</Typography>
-                            <Typography variant="subtitle2" className={classes.eventCardTwoBody}>Aliquet amet dui, enim sollicitudin leo ipsum lectus mi id. Orci ultrices adipiscing interdum habitant vestibulum.</Typography>
+                            <Typography variant="subtitle2" className={classes.eventCardTwoBody}>Stay tuned for upcoming music festivals where we will have a variety of genres, DJ's and events take place</Typography>
                         </div>
                     </Grid>
                     <Grid item xs={12}>
                         <div className={classes.eventsCardThree}>
                             <Typography variant="h2" className={classes.eventCardThreeTitle}>Formula F1</Typography>
-                            <Typography variant="subtitle2" className={classes.eventCardThreeBody}>Aliquet amet dui, enim sollicitudin leo ipsum lectus mi id. Orci ultrices adipiscing interdum habitant vestibulum.</Typography>
+                            <Typography variant="subtitle2" className={classes.eventCardThreeBody}>Battle of the NFTs is here, Once a quarter our community will be able to witness NFTs go head to head in a winner takes all knockout racing event! Hold on to your seats!</Typography>
                         </div>
                     </Grid>
                 </Grid>

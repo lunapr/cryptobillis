@@ -1,9 +1,9 @@
 import React from 'react';
-import { Grid, Typography, Container, Button } from '@material-ui/core';
+import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Discord from "./../../assets/Images/discord.png";
-import { Twitter, Instagram } from "@material-ui/icons";
+// import Paper from '@material-ui/core/Paper';
+// import Discord from "./../../assets/Images/discord.png";
+// import { Twitter, Instagram } from "@material-ui/icons";
 
 // import InputBase from '@material-ui/core/InputBase';
 // import Divider from '@material-ui/core/Divider';
@@ -128,9 +128,9 @@ export default function Footer(props) {
                     <Grid container justifyContent='space-between'>
                         <Grid item xs={12} sm={12} md={'auto'}>
                             <Typography variant="h4" className={classes.footerTitle}>CRYPTOBILLI$</Typography>
-                            <Typography variant="subtitle2" className={classes.footerSubtitle}>Aliquet amet dui, enim sollicitudin leo ipsum<br /> lectus mi id. Orci ultrices adipiscing interdum<br /> habitant vestibulum.</Typography>
+                            <Typography variant="subtitle2" className={classes.footerSubtitle}>Our aim is to be at the center of all metaverse events and to ensure that all the entertainment that is provided is nothing short of extraordinary.</Typography>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={'auto'}>
+                        {/* <Grid item xs={12} sm={12} md={'auto'}>
                             <div className={classes.footerSubscribeFlex}>
                                 <Typography variant="subtitle2" className={classes.footerBody}>Subscribe for updates & newsletters.</Typography>
                                 <div className={classes.footerLabelFlex}>
@@ -147,7 +147,7 @@ export default function Footer(props) {
                                     SUBSCRIBE
                                 </Button>
                             </Paper>
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                 </Container>
             </div>
