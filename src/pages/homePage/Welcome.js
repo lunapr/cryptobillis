@@ -5,18 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import Kyle from "./../../assets/Images/serene.png";
 import WelcomeArrows from "./../../assets/Images/welcomeArrows.png";
-// import NewsBtc from './../../assets/Images/News/newsBtc.png';
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
     backgroundColor: "#E5E5E5ff",
-    // paddingBottom: theme.spacing(10),
-    // [theme.breakpoints.down("sm")]: {
-    //     paddingBottom: theme.spacing(9),
-    // },
-    // [theme.breakpoints.down("xs")]: {
-    //     paddingBottom: theme.spacing(8),
-    // }
   },
   welcomeTopWrapper: {
     display: "flex",
@@ -81,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(0),
       marginBottom: theme.spacing(3),
     },
-    // margin: theme.spacing(0, 5, 0, 0),
   },
   welcomeBody: {
     fontWeight: 500,
@@ -113,7 +104,7 @@ export default function Welcome(props) {
             <div className={classes.welcomeCard}>
               <img alt="" src={Kyle} className={classes.welcomeFeature}></img>
               <Typography variant="h6" className={classes.welcomeBody}>
-              CryptoBillis is more than just an NFT that allows you access to events, it’s to remind holders about the path of those that are on their way to becoming Billionaire Billi$ and having a supportive and like-minded community.
+                CryptoBillis is more than just an NFT that allows you access to events, it’s to remind holders about the path of those that are on their way to becoming Billionaire Billi$ and having a supportive and like-minded community.
               </Typography>
             </div>
           </Grid>

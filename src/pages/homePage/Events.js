@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     },
     eventsCardOne: {
         backgroundImage: `url(${PokerNights})`,
-        // backgroundSize: 'center',
         minHeight: 529,
         width: '100%',
         backgroundSize: 'cover',
@@ -63,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
         minHeight: 529,
         width: '100%',
-        // backgroundSize: 'cover',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -120,7 +118,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         minHeight: 529,
         width: '100%',
-        // backgroundSize: 'cover',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',

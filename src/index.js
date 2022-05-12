@@ -216,58 +216,13 @@ const theme = createTheme({
       root: {
         backgroundColor: "#161616 !important",
       },
-      // colorPrimary:{
-      //   backgroundColor:'#000 !important',
-      // }
     },
     MuiButton: {
       root: {
         textTransform: "uppercase",
         borderRadius: 0,
-        // "& svg": {
-        //   width: 24,
-        //   [breakpoints.down("sm")]: {
-        //     width: 22,
-        //   },
-        //   [breakpoints.down("xs")]: {
-        //     width: 20,
-        //   }
-        // },
       },
     },
-    // MuiTextField: {
-    //   root: {
-    //     "& input": {
-    //       color: "rgba(0, 0, 0, 0.45)",
-    //       fontSize: 13,
-    //     },
-    //     // "& input[type='date']::-webkit-calendar-picker-indicator": {
-    //     //   color: 'rgba(0, 0, 0, 0)',
-    //     //   opacity: 1,
-    //     //   // display: 'block',
-    //     //   // background: 'url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat',
-    //     //   // width: 20,
-    //     //   // height: 20,
-    //     //   // borderWidth: 'thin',
-    //     // },
-
-    //     "& fieldset": {
-    //       borderColor: "rgba(253, 253, 253, 0.5)",
-    //       borderWidth: 1,
-    //     },
-
-    //     "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
-    //       borderColor: "rgba(253, 253, 253, 0.5) ",
-    //     },
-    //     '& .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline': {
-    //       borderColor: "rgba(253, 253, 253, 0.5) ",
-    //     },
-    //     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-    //     {
-    //       borderColor: "#ba7ff5",
-    //     },
-    //   },
-    // },
   },
 });
 

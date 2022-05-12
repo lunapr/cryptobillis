@@ -1,17 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
-// import Discord from "./../../assets/Images/discord.png";
-// import { Twitter, Instagram } from "@material-ui/icons";
-
-// import InputBase from '@material-ui/core/InputBase';
-// import Divider from '@material-ui/core/Divider';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-// import SearchIcon from '@material-ui/icons/Search';
-// import DirectionsIcon from '@material-ui/icons/Directions';
-
 const useStyles = makeStyles((theme) => ({
     footer: {
         position: 'relative',
@@ -108,13 +97,13 @@ const useStyles = makeStyles((theme) => ({
             }
         }
     },
-    discordIcon:{
-        width:24,
-        marginLeft:8,
-        marginRight:8,
-        marginTop:5,
-        filter:'invert()'
-      }
+    discordIcon: {
+        width: 24,
+        marginLeft: 8,
+        marginRight: 8,
+        marginTop: 5,
+        filter: 'invert()'
+    }
 }));
 
 export default function Footer(props) {
@@ -130,24 +119,6 @@ export default function Footer(props) {
                             <Typography variant="h4" className={classes.footerTitle}>CRYPTOBILLI$</Typography>
                             <Typography variant="subtitle2" className={classes.footerSubtitle}>Our aim is to be at the center of all metaverse events and to ensure that all the entertainment that is provided is nothing short of extraordinary.</Typography>
                         </Grid>
-                        {/* <Grid item xs={12} sm={12} md={'auto'}>
-                            <div className={classes.footerSubscribeFlex}>
-                                <Typography variant="subtitle2" className={classes.footerBody}>Subscribe for updates & newsletters.</Typography>
-                                <div className={classes.footerLabelFlex}>
-                                    <a href="https://twitter.com/CryptoBillisNFT" target='_blank' rel="noreferrer"><Twitter className={classes.footerIcons} /></a>
-                                    <a href="https://discord.com/invite/VXxhFHARrT" target='_blank' rel="noreferrer">
-                                        <img alt='' src={Discord} className={classes.discordIcon} />
-                                    </a>
-                                    <a href="https://www.instagram.com/cryptobilli/" target='_blank' rel="noreferrer"><Instagram className={classes.footerIcons} /></a>
-                                </div>
-                            </div>
-                            <Paper component="form" className={classes.subscribeWrapper}>
-                                <input placeholder="i.e jon.doe@gmail.com" />
-                                <Button type="submit" color='primary'>
-                                    SUBSCRIBE
-                                </Button>
-                            </Paper>
-                        </Grid> */}
                     </Grid>
                 </Container>
             </div>
@@ -157,7 +128,6 @@ export default function Footer(props) {
                         <Grid item xs={12}>
                             <div className={classes.footerLabelFlex}>
                                 <Typography variant="subtitle2" className={classes.footerLabelText}>All Rights Reserved.</Typography>
-                                {/* <Typography variant="subtitle2" className={classes.footerLabelText}>Made with Love by<span className={classes.withLove}>Luna PR</span></Typography> */}
                             </div>
                         </Grid>
                     </Grid>

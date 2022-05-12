@@ -7,6 +7,7 @@ import Ahmad from "./../../assets/Images/ahmad.jpg";
 import Lillis from "./../../assets/Images/lills.png";
 import Serene from "./../../assets/Images/serene.png";
 import Oleg from "./../../assets/Images/oleg.jpg";
+import Shawnee from "./../../assets/Images/shawnee.jpg";
 import { Instagram, LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -164,7 +165,7 @@ export default function Team(props) {
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
             <div className={classes.teamCard}>
-              <img alt="" src={Serene} className={classes.teamCardImg}></img>
+              <img alt="" src={Shawnee} className={classes.teamCardImg}></img>
               <Typography variant="h4" className={classes.teamCardTitle}>
                 SHAWNEE
               </Typography>

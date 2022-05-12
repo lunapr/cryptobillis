@@ -84,12 +84,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#000',
     padding: theme.spacing(0, 1),
     '& img': {
-      // width: '1%',
       display: 'block',
-      // flex: 1,
       marginLeft: 4,
       marginRight: 4,
-      // width: 'fit-content'
     },
     '& .slick-track': {
       display: 'flex',
@@ -102,7 +99,6 @@ const useStyles = makeStyles((theme) => ({
   },
   star: {
     maxWidth: 24,
-    // width: 'fit-content !important'
   },
   flexWrap: {
     display: 'flex',
@@ -162,9 +158,6 @@ export default function ElevateAppBar(props) {
     initialSlide: 0,
     cssEase: "linear"
   };
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
 
   return (
     <React.Fragment>
@@ -291,7 +284,7 @@ export default function ElevateAppBar(props) {
                 <img alt="" src={Crypto} className={classes.crypto} />
               </div>
               <div >
-                <img alt="" src={Star} className={classes.star} style={{display:'none'}}/>
+                <img alt="" src={Star} className={classes.star} style={{ display: 'none' }} />
               </div>
             </Slider>
           </div>
